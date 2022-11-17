@@ -2,9 +2,16 @@ title: >-
   XX # overall data release title here
 
 abstract: >-
-  XX # a description of this data release
+  This data release provides all data, code, and modelling results used in Topp et al. (2021b) to examine the
+  influence of deep learning architecture on generalizability when predicting stream temperature 
+  in the Delaware River Basin (DRB). Briefly, we modeled stream temperature in the DRB using
+  two spatially and temporally aware process guided deep learning models (a recurrent graph convolution network - RGCN, 
+  and a temporal convolution graph model - Graph WaveNet). The associated 
+  manuscript explores how the architectural differences between the two models influence how
+  they learn spatial and temporal relationships, and how those learned relationships influence a models ability
+  to accurately predict stream temperature as domains shift towards out-of-bounds conditions.
   <br> 
-  The data are stored in 4 child folders: 1) spatial information, 2) observations, and 3) driver data, 4) forecasts
+  The data are stored in 3 child folders: 1) Data Preparation, 2) Model Code, and 3) Model Predictions
 
   <li><a href="https://www.sciencebase.gov/catalog/item/636187b3d34ebe44250656b0"> 1) Spatial Information </a>- Spatial data describing XX (CHANGE hyperlink) </li>
   <li><a href="https://www.sciencebase.gov/catalog/item/636187ced34ebe44250656b3"> 2) Observations </a>- Observations data describing XX (CHANGE hyperlink) </li>   
@@ -16,11 +23,12 @@ abstract: >-
 # ----supporting publications, source code, data releases----
 cross-cites:
   -
-    authors: ["XX_NAME_1", "XX_NAME_2"]
+    authors: ["Simon N. Topp", "Janet Barclay", "Jeremy Diaz", "Alexander Y. Sun","Xiaowei Jia", "Dan Lu","Jeffrey M. Sadler", "Alison Appling"]
     title: >-
-        XX # title of cited item
-    pubdate: XXXX # year of publication for cited item
-    link: http://doi.org/YY.XXXXX/XXXXXX
+      Stream temperature prediction in a shifting environment: The influence of deep learning architecture
+    pubdate: 2022
+    link: XX
+    
   -
     authors: ["XX_NAME_1", "XX_NAME_2"]
     title: >-
