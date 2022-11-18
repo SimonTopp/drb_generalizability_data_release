@@ -13,12 +13,11 @@ abstract: >-
   <br> 
   The data are stored in 3 child folders: 1) Data Preparation, 2) Model Code, and 3) Model Predictions
 
-  <li><a href="https://www.sciencebase.gov/catalog/item/636187b3d34ebe44250656b0"> 1) Spatial Information </a>- Spatial data describing XX (CHANGE hyperlink) </li>
-  <li><a href="https://www.sciencebase.gov/catalog/item/636187ced34ebe44250656b3"> 2) Observations </a>- Observations data describing XX (CHANGE hyperlink) </li>   
-  <li><a href="https://www.sciencebase.gov/catalog/item/6361881bd34ebe44250656b8"> 3) Driver data </a>- Driver data used by XX models (CHANGE hyperlink)</li>  
-  <li><a href="https://www.sciencebase.gov/catalog/item/6361882ed34ebe44250656ba"> 3) Forecasted data </a> Model predictions XX (+ CHANGE hyperlink)</li> 
+  <li><a href="https://www.sciencebase.gov/catalog/item/637794a8d34ed907bf6f3a18"> 1) Data Prep </a>- Code for retrieving and formatting model inputs from Sciencebase </li>
+  <li><a href="https://www.sciencebase.gov/catalog/item/637794d5d34ed907bf6f3a9e"> 2) Model Code </a>- Code for model training and evaluation, including workflows to reproduce provided predictions  </li>   
+  <li><a href="https://https://www.sciencebase.gov/catalog/item/637794edd34ed907bf6f3af3"> 3) Model Predictions </a>- Model outputs for baseline predictions and five generalization experiments</li>  
   <br>
-  This data compilation was funded by the USGS, XX.
+  This data complitation was funded by the USGS through the Department of Energy ExaSheds Project interagency agreement number 89243021SSC000068.
 
 # ----supporting publications, source code, data releases----
 cross-cites:
@@ -45,7 +44,7 @@ entities:
 build-environment: Multiple computer operating systems were used to generate these data, including Windows, linux, OSX. The open source languages R and Python were used on all systems.
 
 process-date: !expr format(Sys.time(),'%Y%m%d')
-indirect-spatial: U.S.A.
+indirect-spatial: Delaware River Basin
 latitude-res: XX # lat resolution in degrees
 longitude-res: XX # lon resolution in degrees
 data-description: >-
