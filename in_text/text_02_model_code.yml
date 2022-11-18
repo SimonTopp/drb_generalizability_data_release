@@ -1,62 +1,46 @@
 title: >-
-  XX # observations data item title
+  02 Model Code
 
 abstract: >-
-  XX # a description of the subset of data contained in this child item
-
-cross-cites:
-  -
-    authors: ["XX_NAME_1", "XX_NAME_2"]
-    title: >-
-      XX - title of cited item
-    pubdate: XXXX - year of publication for cited item
-    link: https://doi.org/YY.XXXXX/XXXXXX
-  -
-    authors: ["XX_NAME_1", "XX_NAME_2"]
-    title: >-
-        XX - title of cited item
-    pubdate: XXXX - year of publication for cited item
-    link: http://doi.org/YY.XXXXX/XXXXXX
+  This child item contains the codebase used to train the two models and evaluate
+  model results. Additionally, it includes Snakemake workflows used to obtain the provided model
+  predictions as well as Snakemake workflows for generic model training.
 
 entities:
   -
-    data-name: XX_observations1.zip
+    data-name: 02_Model_Code.zip
     data-description: >-
-      XX # description of data in file 1
+      A zipped file of the modelling codebase
     attributes:
     -
-      attr-label: XX # name of attribute 1
+      attr-label: READme.md
       attr-def: >-
-        XX # description of attribute 1
+        A markdown file describing how to run the provided workflows.
       attr-defs: XX # location where attributes are deinfed - can be "This data release" or a link to another data source page
       data-min: XX
       data-max: XX
       data-units: XX
     -
-      attr-label: XX # name of attribute 2
+      attr-label: river-dl
       attr-def: >-
-        XX # description of attribute 2
-      attr-defs: XX # location where attributes are deinfed - can be "This data release" or a link to another data source page
-      data-min: XX
-      data-max: XX
-      data-units: XX
-  -
-    data-name: XX_observations2.zip
-    data-description: >-
-      XX # description of data in file 2
-    attributes:
-    -
-      attr-label: XX # name of attribute 1
-      attr-def: >-
-        XX # description of attribute 1
+        A folder containing the source code, including models, pre-processing steps, training routines, and model evaluation.
       attr-defs: XX # location where attributes are deinfed - can be "This data release" or a link to another data source page
       data-min: XX
       data-max: XX
       data-units: XX
     -
-      attr-label: XX # name of attribute 2
+      attr-label: environment.yaml
       attr-def: >-
-        XX # description of attribute 2
+        An environment yaml for creating a conda environment with the necessary libraries.
+      attr-defs: XX # location where attributes are deinfed - can be "This data release" or a link to another data source page
+      data-min: XX
+      data-max: XX
+      data-units: XX
+    -
+      attr-label: Workflow Examples
+      attr-def: >-
+        A directory with Snakemake workflows and associated configuration files both
+        for basic training and to reproduce the results provided in 03_Model_Predictions.
       attr-defs: XX # location where attributes are deinfed - can be "This data release" or a link to another data source page
       data-min: XX
       data-max: XX
