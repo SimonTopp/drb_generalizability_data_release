@@ -1,0 +1,234 @@
+title: >-
+  Comparison of two PGDL stream temperature models under shifting domain conditoins
+
+
+abstract: >-
+  This data release provides all data, code, and modelling results used in Topp et al. (2021b) to examine the
+  influence of deep learning architecture on generalizability when predicting stream temperature 
+  in the Delaware River Basin (DRB). Briefly, we modeled stream temperature in the DRB using
+  two spatially and temporally aware process guided deep learning models (a recurrent graph convolution network - RGCN, 
+  and a temporal convolution graph model - Graph WaveNet). The associated 
+  manuscript explores how the architectural differences between the two models influence how
+  they learn spatial and temporal relationships, and how those learned relationships influence a models ability
+  to accurately predict stream temperature as domains shift towards out-of-bounds conditions. This data release and model
+  archive contains three zipped folders for 1) Data Preparation, 2) Modelling Code, and 3) Model Predictions.
+      
+authors: ["Simon N. Topp", "Janet Barclay", "Jeremy Diaz", "Alexander Y. Sun","Xiaowei Jia", "Dan Lu","Jeffrey M. Sadler", "Alison Appling"]
+pubdate: 2022 # replace with actual year, e.g., 2020
+doi: https://doi.org/YY.XXXXX/XXXXXX # replace with actual DOI
+
+build-environment: Multiple computer systems were used to generate these data, including linux and OSX. The open source languages R and Python were used on all systems.
+
+# ----associated publication----
+larger-cites:
+  -
+    authors: ["Simon N. Topp", "Janet Barclay", "Jeremy Diaz", "Alexander Y. Sun","Xiaowei Jia", "Dan Lu","Jeffrey M. Sadler", "Alison Appling"]
+    title: >-
+      Stream temperature prediction in a shifting environment: The influence of deep learning architecture
+    pubdate: 2022
+
+# ----supporting publications----    
+cross-cites:
+  -
+    authors: ["Samantha K. Oliver", "Rasha A. Atshan", "William D. Watkins", "Hayley R. Corson-Dosch", "Jacob A. Zwart", "Jordan S. Read"]
+    title: >-
+      Data release: Predicting water temperature in the Delaware River Basin: U.S. Geological Survey data release
+    pubdate: 2021
+    link: https://doi.org/10.5066/P9GD8I7A
+    
+process-date: !expr format(Sys.time(),'%Y%m%d')
+file-format: Three zipped folders containing
+
+entities:
+  -
+    data-name: 01_Data_Prep.zip
+    data-description: >-
+      A zipped file containing code to retrieve and format data for modelling
+    attributes:
+    -
+      attr-label:  environment.yaml
+      attr-def: >-
+        A yaml file for creating the necessary Python environment to run the workflow
+      attr-defs: XX # location where attributes are deinfed - can be "This data release" or a link to another data source page
+      data-min: XX
+      data-max: XX
+      data-units: XX
+    -
+      attr-label: config.yml
+      attr-def: >-
+        A configuration file for specifying attributes to pull from Sciencebase and
+      attr-defs: This data release # location where attributes are deinfed - can be "This data release" or a link to another data source page
+      data-min: XX
+      data-max: XX
+      data-units: XX
+    -
+      attr-label: Snakefile
+      attr-def: >-
+        A snakemake workflow for pulling and formatting data
+      attr-defs: This data release # location where attributes are deinfed - can be "This data release" or a link to another data source page
+      data-min: XX
+      data-max: XX
+      data-units: XX
+    -
+      attr-label: makeArrays.py
+      attr-def: >-
+        Utility functions for formatting pulled csv files to zarr and dictionary format for modelling
+      attr-defs: This data release # location where attributes are deinfed - can be "This data release" or a link to another data source page
+      data-min: XX
+      data-max: XX
+      data-units: XX
+    -
+      attr-label: makeDistanceMatrix.py
+      attr-def: >-
+        Utility functions for creating a distance matrix representing the Delaware River Basin river network
+      attr-defs: This data release # location where attributes are deinfed - can be "This data release" or a link to another data source page
+      data-min: XX
+      data-max: XX
+      data-units: XX
+    -
+      attr-label: getSciencebaseItems.py
+      attr-def: >-
+        Utility functions for pulling down items from Sciencebase
+      attr-defs: This data release # location where attributes are deinfed - can be "This data release" or a link to another data source page
+      data-min: XX
+      data-max: XX
+      data-units: XX
+    -
+      attr-label: READMe.md
+      attr-def: >-
+        A markdown file detailing how to run the included workflow
+      attr-defs: This data release # location where attributes are deinfed - can be "This data release" or a link to another data source page
+      data-min: XX
+      data-max: XX
+      data-units: XX
+    -
+    data-name: 02_Model_Code.zip
+    data-description: >-
+      A zipped file of the modelling codebase
+    attributes:
+    -
+      attr-label: READme.md
+      attr-def: >-
+        A markdown file describing how to run the provided workflows.
+      attr-defs: This data release # location where attributes are deinfed - can be "This data release" or a link to another data source page
+      data-min: XX
+      data-max: XX
+      data-units: XX
+    -
+      attr-label: river-dl
+      attr-def: >-
+        A folder containing the source code, including models, pre-processing steps, training routines, and model evaluation.
+      attr-defs: This data release # location where attributes are deinfed - can be "This data release" or a link to another data source page
+      data-min: XX
+      data-max: XX
+      data-units: XX
+    -
+      attr-label: environment.yaml
+      attr-def: >-
+        An environment yaml for creating a conda environment with the necessary libraries.
+      attr-defs: This data release # location where attributes are deinfed - can be "This data release" or a link to another data source page
+      data-min: XX
+      data-max: XX
+      data-units: XX
+    -
+      attr-label: Workflow Examples
+      attr-def: >-
+        A directory with example Snakemake workflows and associated configuration files to conduct
+        basic training and evaluation models contained in the associated repository.
+      attr-defs: This data release # location where attributes are deinfed - can be "This data release" or a link to another data source page
+      data-min: XX
+      data-max: XX
+      data-units: XX
+  -
+    data-name: XX_drivers1.zip
+    data-description: >-
+      XX # description of data in file 1
+    attributes:
+    -
+      attr-label: XX # name of attribute 1
+      attr-def: >-
+        XX # description of attribute 1
+      attr-defs: XX # location where attributes are deinfed - can be "This data release" or a link to another data source page
+      data-min: XX
+      data-max: XX
+      data-units: XX
+    -
+      attr-label: XX # name of attribute 2
+      attr-def: >-
+        XX # description of attribute 2
+      attr-defs: XX # location where attributes are deinfed - can be "This data release" or a link to another data source page
+      data-min: XX
+      data-max: XX
+      data-units: XX
+  -
+    data-name: 03_Model_Predictions.zip
+    data-description: >-
+      A zipped filed containing all model predictions used in the associated 
+    attributes:
+    -
+      attr-label: XX # name of attribute 1
+      attr-def: >-
+        XX # description of attribute 1
+      attr-defs: XX # location where attributes are deinfed - can be "This data release" or a link to another data source page
+      data-min: XX
+      data-max: XX
+      data-units: XX
+    -
+      attr-label: XX # name of attribute 2
+      attr-def: >-
+        XX # description of attribute 2
+      attr-defs: XX # location where attributes are deinfed - can be "This data release" or a link to another data source page
+      data-min: XX
+      data-max: XX
+      data-units: XX
+
+purpose: Deep learning, Explainable AI, and climate science.
+start-date: 19800401
+end-date: 20191231
+
+update: none planned
+themekeywords: ["Process Guided Deep Learning", "generalization", "Explainable AI (XAI)", "stream temperature", "domain shift", "machine learning", "hybrid modeling", "water","temperature","modeling","climate change"]
+
+usage-rules: >-
+  These data are open access usable via creative commons as long as original data providers are acknowledged
+
+data-publisher: U.S. Geological Survey
+indirect-spatial: U.S.A.
+latitude-res: 0.00001
+longitude-res: 0.00001
+
+# ----contacts----
+contact-person: Simon N. Topp
+contact-phone: 303-917-2694
+contact-email: stopp@usgs.gov
+contact-position: Machine Learning Specialist
+contact-address: "8505 Research Way"
+contact-city: Middleton
+contact-state: WI
+contact-zip: 53562
+
+metadata-person: Simon N. Topp
+metadata-position: Machine Learning Specialist
+metadata-phone: 303-917-2694
+metadata-fax: 
+metadata-email: stopp@usgs.gov
+metadata-address: "8505 Research Way"
+metadata-city: Middleton
+metadata-state: WI
+metadata-zip: 53562
+metadata-date: !expr format(Sys.time(),'%Y%m%d')
+
+accur-test: No formal attribute accuracy tests were conducted.
+funding-credits: >-
+  This study was funded by the Department of Energy ExaSheds Project interagency agreement number 89243021SSC000068.
+  This research used resources of the Core Science Analytics and Synthesis Advanced Research Computing program at the U.S. Geological Survey.
+
+process-description: >-
+  [A description of processing]
+
+distro-person: Jordan S. Read
+liability-statement: >-
+  Unless otherwise stated, all data, metadata and related materials are considered to satisfy the quality standards relative to the purpose for which the data were collected.
+  Although these data and associated metadata have been reviewed for accuracy and completeness and approved for release by the U.S. Geological Survey (USGS),
+  no warranty expressed or implied is made regarding the display or utility of the data on any other system or for general or scientific purposes, nor shall
+  the act of distribution constitute any such warranty.
