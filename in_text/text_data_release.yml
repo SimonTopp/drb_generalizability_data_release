@@ -183,6 +183,14 @@ entities:
       data-min: XX
       data-max: XX
       data-units: XX
+    -
+      attr-label: Drought # name of attribute 2
+      attr-def: >-
+        Results for explainable AI (XAI) interrogation of model architectures and predictions.
+      attr-defs: This data release. # location where attributes are deinfed - can be "This data release" or a link to another data source page
+      data-min: XX
+      data-max: XX
+      data-units: XX
 
 
 purpose: Deep learning, Explainable AI, and climate science.
