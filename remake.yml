@@ -8,7 +8,7 @@ packages:
 
 sources:
   - src/sb_utils.R
-  - src/file_utils.R
+  - src/file_functions.R
 
 targets:
   all:
