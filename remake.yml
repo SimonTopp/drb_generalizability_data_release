@@ -15,17 +15,14 @@ targets:
     depends:
       - log/sb_posted_files.csv
     
-  out_data/spatial.zip:
-    command: sf_to_zip(zip_filename = target_name, 
-      sf_object = sf_spatial_data, layer_name = I('spatial_data'))
+  out_data/01_Data_Prep.zip:
+    command: zip_files(out_file = target_name, "in_data/river-dl_data_prep")
       
-  out_data/spatial.zip:
-    command: sf_to_zip(zip_filename = target_name, 
-      sf_object = sf_spatial_data, layer_name = I('spatial_data'))
+  out_data/02_Model_Code.zip:
+    command: zip_files(out_file = target_name, "in_data/river-dl")
       
-  out_data/spatial.zip:
-    command: sf_to_zip(zip_filename = target_name, 
-      sf_object = sf_spatial_data, layer_name = I('spatial_data'))
+  out_data/03_Model_Predictions.zip:
+    command: zip_files(out_file = target_name, "in_data/results")
       
   out_xml/fgdc_metadata.xml:
     command: render(filename = target_name,
