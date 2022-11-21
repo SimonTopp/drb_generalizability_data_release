@@ -1,7 +1,6 @@
 title: >-
   Comparison of two PGDL stream temperature models under shifting domain conditoins
 
-
 abstract: >-
   This data release provides all data, code, and modelling results used in Topp et al. (2021b) to examine the
   influence of deep learning architecture on generalizability when predicting stream temperature 
@@ -140,47 +139,51 @@ entities:
       data-max: XX
       data-units: XX
   -
-    data-name: XX_drivers1.zip
-    data-description: >-
-      XX # description of data in file 1
-    attributes:
-    -
-      attr-label: XX # name of attribute 1
-      attr-def: >-
-        XX # description of attribute 1
-      attr-defs: XX # location where attributes are deinfed - can be "This data release" or a link to another data source page
-      data-min: XX
-      data-max: XX
-      data-units: XX
-    -
-      attr-label: XX # name of attribute 2
-      attr-def: >-
-        XX # description of attribute 2
-      attr-defs: XX # location where attributes are deinfed - can be "This data release" or a link to another data source page
-      data-min: XX
-      data-max: XX
-      data-units: XX
-  -
     data-name: 03_Model_Predictions.zip
     data-description: >-
-      A zipped filed containing all model predictions used in the associated 
+     A zipped file of all modelling results and the Snakemake workflows that generated them.
     attributes:
     -
-      attr-label: XX # name of attribute 1
+      attr-label: Snakemake_Workflows # name of attribute 1
       attr-def: >-
-        XX # description of attribute 1
-      attr-defs: XX # location where attributes are deinfed - can be "This data release" or a link to another data source page
+        Snakemake workflows and associated configuration files used to generate results.
+      attr-defs: This data release. # location where attributes are deinfed - can be "This data release" or a link to another data source page
       data-min: XX
       data-max: XX
       data-units: XX
     -
-      attr-label: XX # name of attribute 2
+      attr-label: LLO # name of attribute 2
       attr-def: >-
-        XX # description of attribute 2
-      attr-defs: XX # location where attributes are deinfed - can be "This data release" or a link to another data source page
+        Modelling results for leave-location-out experiments.
+      attr-defs: This data release. # location where attributes are deinfed - can be "This data release" or a link to another data source page
       data-min: XX
       data-max: XX
       data-units: XX
+    -
+      attr-label: LTO # name of attribute 2
+      attr-def: >-
+        Modelling results for leave-time-out experiments.
+      attr-defs: This data release. # location where attributes are deinfed - can be "This data release" or a link to another data source page
+      data-min: XX
+      data-max: XX
+      data-units: XX
+    -
+      attr-label: baseline # name of attribute 2
+      attr-def: >-
+        Modelling results for for baseline models where testing partition is well represented in training partion.
+      attr-defs: This data release. # location where attributes are deinfed - can be "This data release" or a link to another data source page
+      data-min: XX
+      data-max: XX
+      data-units: XX
+    -
+      attr-label: Drought # name of attribute 2
+      attr-def: >-
+        Modelling results for drought experiments.
+      attr-defs: This data release. # location where attributes are deinfed - can be "This data release" or a link to another data source page
+      data-min: XX
+      data-max: XX
+      data-units: XX
+
 
 purpose: Deep learning, Explainable AI, and climate science.
 start-date: 19800401
@@ -224,9 +227,11 @@ funding-credits: >-
   This research used resources of the Core Science Analytics and Synthesis Advanced Research Computing program at the U.S. Geological Survey.
 
 process-description: >-
-  [A description of processing]
+  Files in this database are simply zipped versions of the code used to generate results for the 
+  associated manuscript.  Instructions for replicating all workflows are contained in the relevant README.md 
+  within each zipped folder. 
 
-distro-person: Jordan S. Read
+distro-person: Simon N. Topp
 liability-statement: >-
   Unless otherwise stated, all data, metadata and related materials are considered to satisfy the quality standards relative to the purpose for which the data were collected.
   Although these data and associated metadata have been reviewed for accuracy and completeness and approved for release by the U.S. Geological Survey (USGS),
