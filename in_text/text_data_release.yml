@@ -36,14 +36,14 @@ cross-cites:
     link: https://doi.org/10.5066/P9GD8I7A
     
 process-date: !expr format(Sys.time(),'%Y%m%d')
-file-format: Three zipped folders containing
+file-format: Three zipped folders.
 
 entities:
   -
     data-name: 01_Data_Prep.zip
     data-description: >-
       A zipped file containing code to retrieve and format data for modelling
-    attributes:
+    attributes: 
     -
       attr-label: environment.yaml
       attr-def: >-
@@ -104,7 +104,7 @@ entities:
     data-name: 02_Model_Code.zip
     data-description: >-
       A zipped file of the modelling codebase
-    attributes:
+    attributes: 
     -
       attr-label: READme.md
       attr-def: >-
@@ -142,7 +142,7 @@ entities:
     data-name: 03_Model_Predictions.zip
     data-description: >-
      A zipped file of all modelling results and the Snakemake workflows that generated them.
-    attributes:
+    attributes: 
     -
       attr-label: Snakemake_Workflows # name of attribute 1
       attr-def: >-
@@ -213,7 +213,7 @@ contact-zip: 53562
 metadata-person: Simon N. Topp
 metadata-position: Machine Learning Specialist
 metadata-phone: 303-917-2694
-metadata-fax: 
+metadata-fax: XX
 metadata-email: stopp@usgs.gov
 metadata-address: "8505 Research Way"
 metadata-city: Middleton
