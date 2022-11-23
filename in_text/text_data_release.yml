@@ -196,7 +196,7 @@ usage-rules: >-
   These data are open access usable via creative commons as long as original data providers are acknowledged
 
 data-publisher: U.S. Geological Survey
-indirect-spatial: U.S.A.
+indirect-spatial: Delaware River Basin
 latitude-res: 0.00001
 longitude-res: 0.00001
 
