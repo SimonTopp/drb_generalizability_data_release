@@ -2,7 +2,7 @@ title: >-
   Examining the influence of deep learning architecture on generalizability for predicting stream temperature in the Delaware River Basin
 
 abstract: >-
-  This data release provides all data, code, and modelling results used in Topp et al. (2021b) to examine the
+  This data release and model archive provides all data, code, and modelling results used in Topp et al. (2022) to examine the
   influence of deep learning architecture on generalizability when predicting stream temperature 
   in the Delaware River Basin (DRB). Briefly, we modeled stream temperature in the DRB using
   two spatially and temporally aware process guided deep learning models (a recurrent graph convolution network - RGCN, 
@@ -24,7 +24,7 @@ larger-cites:
     authors: ["Simon N. Topp", "Janet Barclay", "Jeremy Diaz", "Alexander Y. Sun","Xiaowei Jia", "Dan Lu","Jeffrey M. Sadler", "Alison Appling"]
     title: >-
       Stream temperature prediction in a shifting environment: The influence of deep learning architecture
-    pubdate: 2022
+    pubdate: 202X
 
 # ----supporting publications----    
 cross-cites:
@@ -33,10 +33,12 @@ cross-cites:
     title: >-
       Data release: Predicting water temperature in the Delaware River Basin: U.S. Geological Survey data release
     pubdate: 2021
+    form: publication
+    doi: 10.5066/P9GD8I7A
     link: https://doi.org/10.5066/P9GD8I7A
     
 process-date: !expr format(Sys.time(),'%Y%m%d')
-file-format: Three zipped folders.
+file-format: Three zipped folders
 
 entities:
   -
@@ -55,7 +57,7 @@ entities:
     -
       attr-label: config.yml
       attr-def: >-
-        A configuration file for specifying attributes to pull from Sciencebase and
+        A configuration file for specifying items to pull from Sciencebase
       attr-defs: This data release # location where attributes are deinfed - can be "This data release" or a link to another data source page
       data-min: XX
       data-max: XX
@@ -71,7 +73,7 @@ entities:
     -
       attr-label: makeArrays.py
       attr-def: >-
-        Utility functions for formatting pulled csv files to zarr and dictionary format for modelling
+        Utility functions for formatting pulled csv files to zarr format for modelling
       attr-defs: This data release # location where attributes are deinfed - can be "This data release" or a link to another data source page
       data-min: XX
       data-max: XX
@@ -133,7 +135,7 @@ entities:
       attr-label: Workflow Examples
       attr-def: >-
         A directory with example Snakemake workflows and associated configuration files to conduct
-        basic training and evaluation models contained in the associated repository.
+        basic training and evaluation of models contained in the associated repository.
       attr-defs: This data release # location where attributes are deinfed - can be "This data release" or a link to another data source page
       data-min: XX
       data-max: XX
@@ -170,7 +172,7 @@ entities:
     -
       attr-label: baseline # name of attribute 2
       attr-def: >-
-        Modelling results for for baseline models where testing partition is well represented in training partion.
+        Modelling results for for baseline models where the testing partition is well represented in the training partion.
       attr-defs: This data release. # location where attributes are deinfed - can be "This data release" or a link to another data source page
       data-min: XX
       data-max: XX
@@ -185,20 +187,21 @@ entities:
       data-units: XX
 
 
-purpose: Deep learning, Explainable AI, and climate science.
+purpose: This release is relevant to various deep learning tasks, including model understanding and interrogation through explainable AI as well as implementation of complex deep learning architectures for water resource problems.
 start-date: 19800401
 end-date: 20191231
 
 update: none planned
-themekeywords: ["Process Guided Deep Learning", "generalization", "Explainable AI (XAI)", "stream temperature", "domain shift", "machine learning", "hybrid modeling", "water","temperature","modeling","climate change"]
+themekeywords: ["process guided deep learning", "generalization", "explainable AI (XAI)", "stream temperature", "domain shift", "machine learning", "hybrid modeling", "water","temperature","modeling","climate change"]
 
 usage-rules: >-
   These data are open access usable via creative commons as long as original data providers are acknowledged
 
+descgeog: "Zipped folders containing code and csv files detailing stream temperature predictions in the Delaware River Basin"
 data-publisher: U.S. Geological Survey
 indirect-spatial: Delaware River Basin
-latitude-res: 0.00001
-longitude-res: 0.00001
+latitude-res: 0.1
+longitude-res: 0.1
 
 # ----contacts----
 contact-person: Simon N. Topp
@@ -223,12 +226,12 @@ metadata-date: !expr format(Sys.time(),'%Y%m%d')
 
 accur-test: No formal attribute accuracy tests were conducted.
 funding-credits: >-
-  This study was funded by the Department of Energy ExaSheds Project interagency agreement number 89243021SSC000068.
+  This study was funded by the USGS through the Department of Energy ExaSheds Project interagency agreement number 89243021SSC000068.
   This research used resources of the Core Science Analytics and Synthesis Advanced Research Computing program at the U.S. Geological Survey.
 
 process-description: >-
   Files in this database are simply zipped versions of the code used to generate results for the 
-  associated manuscript.  Instructions for replicating all workflows are contained in the relevant README.md 
+  associated manuscript.  Processing descriptions and instructions for replicating all workflows are contained in the relevant README.md 
   within each zipped folder. 
 
 distro-person: Simon N. Topp
