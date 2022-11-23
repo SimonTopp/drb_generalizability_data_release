@@ -1,5 +1,5 @@
 title: >-
-  Comparison of two PGDL stream temperature models under shifting domain conditoins
+  Examining the influence of deep learning architecture on generalizability for predicting stream temperature in the Delaware River Basin
 
 abstract: >-
   This data release provides all data, code, and modelling results used in Topp et al. (2021b) to examine the
@@ -14,7 +14,7 @@ abstract: >-
       
 authors: ["Simon N. Topp", "Janet Barclay", "Jeremy Diaz", "Alexander Y. Sun","Xiaowei Jia", "Dan Lu","Jeffrey M. Sadler", "Alison Appling"]
 pubdate: 2022 # replace with actual year, e.g., 2020
-doi: https://doi.org/YY.XXXXX/XXXXXX # replace with actual DOI
+doi: https://doi.org/10.5066/P9HU7BLR # replace with actual DOI
 
 build-environment: Multiple computer systems were used to generate these data, including linux and OSX. The open source languages R and Python were used on all systems.
 
