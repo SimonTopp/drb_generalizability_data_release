@@ -16,7 +16,9 @@ authors: ["Simon N. Topp", "Janet Barclay", "Jeremy Diaz", "Alexander Y. Sun","X
 pubdate: 2022 # replace with actual year, e.g., 2020
 doi: https://doi.org/10.5066/P9HU7BLR # replace with actual DOI
 
-build-environment: Multiple computer systems were used to generate these data, including linux and OSX. The open source languages R and Python were used on all systems.
+build-environment:  >-
+  Multiple computer systems were used to generate these data, including linux and OSX. The open source languages R and Python were used on all systems.
+  Instructions for setting up the compute environments required as well as run instructions are included in the Readme files of the data prep and model code zip files.
 
 # ----associated publication----
 larger-cites:
