@@ -10,7 +10,8 @@ abstract: >-
   manuscript explores how the architectural differences between the two models influence how
   they learn spatial and temporal relationships, and how those learned relationships influence a models ability
   to accurately predict stream temperature as domains shift towards out-of-bounds conditions. This data release and model
-  archive contains three zipped folders for 1) Data Preparation, 2) Modelling Code, and 3) Model Predictions.
+  archive contains three zipped folders for 1) Data Preparation, 2) Modelling Code, and 3) Model Predictions. Instructions for running
+  data preparation code and modelling code can be found in the README.md files in 01_Data_Prep and 02_Model_Code respectively.  
       
 authors: ["Simon N. Topp", "Janet Barclay", "Jeremy Diaz", "Alexander Y. Sun","Xiaowei Jia", "Dan Lu","Jeffrey M. Sadler", "Alison Appling"]
 pubdate: 2022 # replace with actual year, e.g., 2020
