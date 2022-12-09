@@ -32,8 +32,8 @@ targets:
     command: sb_replace_files_log(filename = target_name, 
       sb_id = I('63779139d34ed907bf6f2cc9'),
       sources = "src/sb_utils.R",
-      "out_xml/data_release_metadata.xml")
+      "out_xml/data_release_metadata.xml",
+      "out_data/01_Data_Prep.zip",
+      "out_data/02_Model_Code.zip",
+      "out_data/03_Model_Predictions.zip")
 
-#"out_data/01_Data_Prep.zip",
-#"out_data/02_Model_Code.zip",
-#"out_data/03_Model_Predictions.zip",

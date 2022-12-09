@@ -1,2 +1,5 @@
 filepath,sb_id,time_uploaded_to_sb
-out_xml/data_release_metadata.xml,63779139d34ed907bf6f2cc9,2022-11-29 18:33 UTC
+out_xml/data_release_metadata.xml,63779139d34ed907bf6f2cc9,2022-12-09 14:05 UTC
+out_data/01_Data_Prep.zip,63779139d34ed907bf6f2cc9,2022-12-09 14:08 UTC
+out_data/02_Model_Code.zip,63779139d34ed907bf6f2cc9,2022-12-09 14:08 UTC
+out_data/03_Model_Predictions.zip,63779139d34ed907bf6f2cc9,2022-12-09 14:08 UTC
