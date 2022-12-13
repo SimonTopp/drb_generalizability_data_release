@@ -232,27 +232,41 @@ funding-credits: >-
   This research used resources of the Core Science Analytics and Synthesis Advanced Research Computing program at the U.S. Geological Survey.
 
 process-description: >-
-  Details of processing steps contained within this release are below, for additional information please see the relevant README.md 
-  within each zipped folder.:
+  Details of processing steps contained within this release are below, for additional information please 
+  see the relevant README.md within each zipped folder.:
   
-  (01_Data Prep)
-  1) Downloads daily meterological drivers (1980-2021), reach characterstics, process model outputs, stream temperature observations, 
-  and an adjacency matrix detailing spatial relationships for 456 river reaches within the Delaware River Basin from Sciencebase 
-  [Oliver et al, 2021](https://doi.org/10.5066/P9GD8I7A). All drivers, reach information, and observations are munged to remove missing values and extreme outliers.
+  (Processed in 01_Data Prep)
+  1) Initial data is downloaded from Sciencebase [Oliver et al, 2021](https://doi.org/10.5066/P9GD8I7A). This data includes daily 
+  meterological drivers (1980-2021), reach characterstics, process model outputs, stream temperature observations, 
+  and an adjacency matrix detailing spatial relationships for 456 river reaches within the Delaware River Basin. 
+   All drivers, reach information, and observations are munged to remove missing values and extreme outliers.
   
-  (02_Model_Code)
-  2) Code takes the output of 1 and separates it into training, validation, and test partions as defined by the configuration files for the Snakemake workflows.
+  (Processed in 02_Model_Code)
+  2) Code takes the output of 1 and separates it into training, validation, and test partions as defined by the 
+  configuration files for the Snakemake workflows.
   
   3) Prepared data are used to train two different spatiotemporally aware process guided deep learning models.
-  The first is a Recurrent Graph Convolution Network and the second is a Dilated Temporal Convolution Graph Model (GraphWave Net). Training is done in two phases.  
-  First, models are pre-trained on the process model outputs (PRMS-SNTemp) for the entire region and study period.
-  After pre-training, models are fine-tuned on stream temperature observations restricted to the training period and reaches defined in the configuration file. Fine-tuning
-  is done with an early stopping metric that stops training if the loss on the validation data partion
+  The first is a Recurrent Graph Convolution Network and the second is a Dilated Temporal Convolution Graph Model (GraphWave Net). 
+  Training is done in two phases for 6 different study scenarios (listed below). First, models are pre-trained on the process model 
+  outputs (PRMS-SNTemp) for the entire region and study period. After pre-training, models are fine-tuned on stream temperature 
+  observations restricted to the training period and reaches defined in the configuration file. Fine-tuning is done with an 
+  early stopping metric that stops training if the loss on the validation data partion hasn't improved in 20 epochs. This release
+  contains results for six different training scenarios:
+
+      - A baseline scneario where testing data is well represented in training data
+      - A leave-time-out scenario where the warmest years are withheld from training to simulate performance under increasing temperatures.
+      - A leave-time-out scenario where the driest years are withheld from training to simulate performance under drought conditions.
+      - Three leave-location-out scenarios where different sets of biogeophysically distinct regions are withheld from training
+      to simulate performance in unseen geographic domains.
   
   3) Trained models are used to make predictions on the hold-out test partions. Error metrics, including bias, root mean squared error, and nash-sutcliffe efficiency
-  are calculated for the overall partitions, by reach/partition, and by month/partition.
+  are calculated for the overall partitions, by reach/partition, and by month/partition. These metrics can be found in 03_Model_Predictions in the 
+  "overall_metrics.csv", "reach_metrics.csv", and "month_metrics.csv" files for each model/training run respectively.
   
-  4) Spatial and temporal relationships learned by the models were then interrogated using expected gradients and permutation based approaches.
+  4) Expected gradients and permutation based explainable AI (XAI) approaches are used to understand the learned spatial and temporal relationships
+  within the models. These experiments examine how inputs at one location or timestep influence predictions at another.  Workflows to recreate
+  these experiments can be found in 03_Model_Predictions/Snakemake_Workflows and actual outputs can be found in 03_Model_Predictions/xai_outputs.
+  
 
 distro-person: Simon N. Topp
 liability-statement: >-
