@@ -3,15 +3,15 @@ title: >-
 
 abstract: >-
   This data release and model archive provides all data, code, and modelling results used in Topp et al. (2022) to examine the
-  influence of deep learning architecture on generalizability when predicting stream temperature 
+  influence of deep learning architecture on generalizability when predicting stream temperature
   in the Delaware River Basin (DRB). Briefly, we modeled stream temperature in the DRB using
-  two spatially and temporally aware process guided deep learning models (a recurrent graph convolution network - RGCN, 
-  and a temporal convolution graph model - Graph WaveNet). The associated 
+  two spatially and temporally aware process guided deep learning models (a recurrent graph convolution network - RGCN,
+  and a temporal convolution graph model - Graph WaveNet). The associated
   manuscript explores how the architectural differences between the two models influence how
   they learn spatial and temporal relationships, and how those learned relationships influence a models ability
   to accurately predict stream temperature as domains shift towards out-of-bounds conditions. This data release and model
   archive contains three zipped folders for 1) Data Preparation, 2) Modelling Code, and 3) Model Predictions. Instructions for running
-  data preparation code and modelling code can be found in the README.md files in 01_Data_Prep and 02_Model_Code respectively.  
+  data preparation code and modelling code can be found in the README.md files in 01_Data_Prep and 02_Model_Code respectively.
       
 authors: ["Simon N. Topp", "Janet Barclay", "Jeremy Diaz", "Alexander Y. Sun","Xiaowei Jia", "Dan Lu","Jeffrey M. Sadler", "Alison Appling"]
 pubdate: 2022 # replace with actual year, e.g., 2020
@@ -27,7 +27,9 @@ larger-cites:
     authors: ["Simon N. Topp", "Janet Barclay", "Jeremy Diaz", "Alexander Y. Sun","Xiaowei Jia", "Dan Lu","Jeffrey M. Sadler", "Alison Appling"]
     title: >-
       Stream temperature prediction in a shifting environment: The influence of deep learning architecture
+    form: publication
     pubdate: 202X
+    link: https://doi.org/XXXXXXX
 
 # ----supporting publications----    
 cross-cites:
@@ -187,7 +189,14 @@ entities:
       data-min: XX
       data-max: XX
       data-units: XX
-
+    -
+      attr-label: xai_outputs # name of attribute 2
+      attr-def: >-
+        Outputs from expected gradients and permutation based explainable AI (XAI)
+      attr-defs: This data release. # location where attributes are deinfed - can be "This data release" or a link to another data source page
+      data-min: XX
+      data-max: XX
+      data-units: XX
 
 purpose: This release is relevant to various deep learning tasks, including model understanding and interrogation through explainable AI as well as implementation of complex deep learning architectures for water resource problems.
 start-date: 19800401
@@ -228,22 +237,32 @@ metadata-date: !expr format(Sys.time(),'%Y%m%d')
 
 accur-test: No formal attribute accuracy tests were conducted.
 funding-credits: >-
-  This study was funded by the USGS through the Department of Energy ExaSheds Project interagency agreement number 89243021SSC000068.
+  This study was funded by the USGS with support from the U.S. Department of Energy, Office of Science, Office of Biological and Environmental 
+  Research, under Interagency Agreement Number 89243021SSC000068 as part of the ExaSheds project.
   This research used resources of the Core Science Analytics and Synthesis Advanced Research Computing program at the U.S. Geological Survey.
 
+####New line and hyperlink examples
+#<br> 
+#  The data are stored in 4 child folders: 1) spatial information, 2) observations, and 3) driver data, 4) forecasts
+#  <a href="url">link text</a>
 process-description: >-
   Details of processing steps contained within this release are below, for additional information please 
-  see the relevant README.md within each zipped folder.:
+  see the relevant README.md within each zipped folder:
+  
   
   (Processed in 01_Data Prep)
-  1) Initial data is downloaded from Sciencebase [Oliver et al, 2021](https://doi.org/10.5066/P9GD8I7A). This data includes daily 
+  
+  1) Initial data is downloaded from Sciencebase Oliver et al, 2021 (https://doi.org/10.5066/P9GD8I7A). This data includes daily 
   meterological drivers (1980-2021), reach characterstics, process model outputs, stream temperature observations, 
   and an adjacency matrix detailing spatial relationships for 456 river reaches within the Delaware River Basin. 
-   All drivers, reach information, and observations are munged to remove missing values and extreme outliers.
+  All drivers, reach information, and observations are munged to remove missing values and extreme outliers.
+
   
   (Processed in 02_Model_Code)
+  
   2) Code takes the output of 1 and separates it into training, validation, and test partions as defined by the 
   configuration files for the Snakemake workflows.
+  
   
   3) Prepared data are used to train two different spatiotemporally aware process guided deep learning models.
   The first is a Recurrent Graph Convolution Network and the second is a Dilated Temporal Convolution Graph Model (GraphWave Net). 
@@ -252,6 +271,7 @@ process-description: >-
   observations restricted to the training period and reaches defined in the configuration file. Fine-tuning is done with an 
   early stopping metric that stops training if the loss on the validation data partion hasn't improved in 20 epochs. This release
   contains results for six different training scenarios:
+  
 
       - A baseline scneario where testing data is well represented in training data
       - A leave-time-out scenario where the warmest years are withheld from training to simulate performance under increasing temperatures.
@@ -259,15 +279,16 @@ process-description: >-
       - Three leave-location-out scenarios where different sets of biogeophysically distinct regions are withheld from training
       to simulate performance in unseen geographic domains.
   
-  3) Trained models are used to make predictions on the hold-out test partions. Error metrics, including bias, root mean squared error, and nash-sutcliffe efficiency
+  
+  4) Trained models are used to make predictions on the hold-out test partions. Error metrics, including bias, root mean squared error, and nash-sutcliffe efficiency
   are calculated for the overall partitions, by reach/partition, and by month/partition. These metrics can be found in 03_Model_Predictions in the 
   "overall_metrics.csv", "reach_metrics.csv", and "month_metrics.csv" files for each model/training run respectively.
   
-  4) Expected gradients and permutation based explainable AI (XAI) approaches are used to understand the learned spatial and temporal relationships
+  
+  5) Expected gradients and permutation based explainable AI (XAI) approaches are used to understand the learned spatial and temporal relationships
   within the models. These experiments examine how inputs at one location or timestep influence predictions at another.  Workflows to recreate
   these experiments can be found in 03_Model_Predictions/Snakemake_Workflows and actual outputs can be found in 03_Model_Predictions/xai_outputs.
   
-
 distro-person: Simon N. Topp
 liability-statement: >-
   Unless otherwise stated, all data, metadata and related materials are considered to satisfy the quality standards relative to the purpose for which the data were collected.
