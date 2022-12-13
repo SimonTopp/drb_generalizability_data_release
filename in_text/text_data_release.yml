@@ -232,9 +232,27 @@ funding-credits: >-
   This research used resources of the Core Science Analytics and Synthesis Advanced Research Computing program at the U.S. Geological Survey.
 
 process-description: >-
-  Files in this database are simply zipped versions of the code used to generate results for the 
-  associated manuscript.  Processing descriptions and instructions for replicating all workflows are contained in the relevant README.md 
-  within each zipped folder. 
+  Details of processing steps contained within this release are below, for additional information please see the relevant README.md 
+  within each zipped folder.:
+  
+  (01_Data Prep)
+  1) Downloads daily meterological drivers (1980-2021), reach characterstics, process model outputs, stream temperature observations, 
+  and an adjacency matrix detailing spatial relationships for 456 river reaches within the Delaware River Basin from Sciencebase 
+  [Oliver et al, 2021](https://doi.org/10.5066/P9GD8I7A). All drivers, reach information, and observations are munged to remove missing values and extreme outliers.
+  
+  (02_Model_Code)
+  2) Code takes the output of 1 and separates it into training, validation, and test partions as defined by the configuration files for the Snakemake workflows.
+  
+  3) Prepared data are used to train two different spatiotemporally aware process guided deep learning models.
+  The first is a Recurrent Graph Convolution Network and the second is a Dilated Temporal Convolution Graph Model (GraphWave Net). Training is done in two phases.  
+  First, models are pre-trained on the process model outputs (PRMS-SNTemp) for the entire region and study period.
+  After pre-training, models are fine-tuned on stream temperature observations restricted to the training period and reaches defined in the configuration file. Fine-tuning
+  is done with an early stopping metric that stops training if the loss on the validation data partion
+  
+  3) Trained models are used to make predictions on the hold-out test partions. Error metrics, including bias, root mean squared error, and nash-sutcliffe efficiency
+  are calculated for the overall partitions, by reach/partition, and by month/partition.
+  
+  4) Spatial and temporal relationships learned by the models were then interrogated using expected gradients and permutation based approaches.
 
 distro-person: Simon N. Topp
 liability-statement: >-
