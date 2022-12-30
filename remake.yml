@@ -14,7 +14,21 @@ targets:
   all:
     depends:
       - log/sb_posted_files.csv
-    
+  
+  sf_spatial_data:
+    command: st_read('in_data/drb_bnd_polygon/drb_bnd_polygon.shp')
+    depends:
+      - in_data/drb_bnd_polygon/drb_bnd_polygon.dbf
+      - in_data/drb_bnd_polygon/drb_bnd_polygon.prj
+      - in_data/drb_bnd_polygon/drb_bnd_polygon.shx
+
+  spatial_metadata:
+    command: extract_feature(sf_spatial_data)
+
+  out_data/spatial.zip:
+    command: sf_to_zip(zip_filename = target_name, 
+      sf_object = sf_spatial_data, layer_name = I('spatial_data'))
+
   out_data/01_Data_Prep.zip:
     command: zip_files(out_file = target_name, "in_data/river-dl_data_prep")
       
@@ -27,10 +41,12 @@ targets:
   out_xml/data_release_metadata.xml:
     command: render(filename = target_name,
       "in_text/text_data_release.yml")
+      
     
   log/sb_posted_files.csv:
     command: sb_replace_files(filename = target_name, 
       sb_id = I('63779139d34ed907bf6f2cc9'),
+      "out_data/spatial.zip",
       "out_xml/data_release_metadata.xml",
       "out_data/01_Data_Prep.zip",
       "out_data/02_Model_Code.zip",
