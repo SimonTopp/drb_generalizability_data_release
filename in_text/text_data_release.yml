@@ -136,7 +136,7 @@ entities:
       data-max: NA
       data-units: NA
     -
-      attr-label: Workflow Examples
+      attr-label: workflow_examples
       attr-def: >-
         A directory with example Snakemake workflows and associated configuration files to conduct
         basic training and evaluation of models contained in the associated repository.
