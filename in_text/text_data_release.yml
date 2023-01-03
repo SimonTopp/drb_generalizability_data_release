@@ -55,57 +55,57 @@ entities:
       attr-def: >-
         A yaml file for creating the necessary Python environment to run the workflow
       attr-defs: This data release # location where attributes are deinfed - can be "This data release" or a link to another data source page
-      data-min: XX
-      data-max: XX
-      data-units: XX
+      data-min: NA
+      data-max: NA
+      data-units: NA
     -
       attr-label: config.yml
       attr-def: >-
         A configuration file for specifying items to pull from ScienceBase
       attr-defs: This data release # location where attributes are deinfed - can be "This data release" or a link to another data source page
-      data-min: XX
-      data-max: XX
-      data-units: XX
+      data-min: NA
+      data-max: NA
+      data-units: NA
     -
       attr-label: Snakefile
       attr-def: >-
         A Snakemake workflow for pulling and formatting data
       attr-defs: This data release # location where attributes are deinfed - can be "This data release" or a link to another data source page
-      data-min: XX
-      data-max: XX
-      data-units: XX
+      data-min: NA
+      data-max: NA
+      data-units: NA
     -
       attr-label: makeArrays.py
       attr-def: >-
         Utility functions for formatting pulled csv files to zarr format for modelling
       attr-defs: This data release # location where attributes are deinfed - can be "This data release" or a link to another data source page
-      data-min: XX
-      data-max: XX
-      data-units: XX
+      data-min: NA
+      data-max: NA
+      data-units: NA
     -
       attr-label: makeDistanceMatrix.py
       attr-def: >-
         Utility functions for creating a distance matrix representing the Delaware River Basin river network
       attr-defs: This data release # location where attributes are deinfed - can be "This data release" or a link to another data source page
-      data-min: XX
-      data-max: XX
-      data-units: XX
+      data-min: NA
+      data-max: NA
+      data-units: NA
     -
       attr-label: getSciencebaseItems.py
       attr-def: >-
         Utility functions for pulling down items from ScienceBase
       attr-defs: This data release # location where attributes are deinfed - can be "This data release" or a link to another data source page
-      data-min: XX
-      data-max: XX
-      data-units: XX
+      data-min: NA
+      data-max: NA
+      data-units: NA
     -
       attr-label: READMe.md
       attr-def: >-
         A markdown file detailing how to run the included workflow
       attr-defs: This data release # location where attributes are deinfed - can be "This data release" or a link to another data source page
-      data-min: XX
-      data-max: XX
-      data-units: XX
+      data-min: NA
+      data-max: NA
+      data-units: NA
   -
     data-name: 02_Model_Code.zip
     data-description: >-
@@ -116,34 +116,34 @@ entities:
       attr-def: >-
         A markdown file describing how to run the provided workflows.
       attr-defs: This data release # location where attributes are deinfed - can be "This data release" or a link to another data source page
-      data-min: XX
-      data-max: XX
-      data-units: XX
+      data-min: NA
+      data-max: NA
+      data-units: NA
     -
       attr-label: river-dl
       attr-def: >-
         A folder containing the source code, including models, pre-processing steps, training routines, and model evaluation.
       attr-defs: This data release # location where attributes are deinfed - can be "This data release" or a link to another data source page
-      data-min: XX
-      data-max: XX
-      data-units: XX
+      data-min: NA
+      data-max: NA
+      data-units: NA
     -
       attr-label: environment.yaml
       attr-def: >-
         An environment yaml for creating a conda environment with the necessary libraries.
       attr-defs: This data release # location where attributes are deinfed - can be "This data release" or a link to another data source page
-      data-min: XX
-      data-max: XX
-      data-units: XX
+      data-min: NA
+      data-max: NA
+      data-units: NA
     -
       attr-label: Workflow Examples
       attr-def: >-
         A directory with example Snakemake workflows and associated configuration files to conduct
         basic training and evaluation of models contained in the associated repository.
       attr-defs: This data release # location where attributes are deinfed - can be "This data release" or a link to another data source page
-      data-min: XX
-      data-max: XX
-      data-units: XX
+      data-min: NA
+      data-max: NA
+      data-units: NA
   -
     data-name: 03_Model_Predictions.zip
     data-description: >-
@@ -154,49 +154,49 @@ entities:
       attr-def: >-
         Snakemake workflows and associated configuration files used to generate results.
       attr-defs: This data release. # location where attributes are deinfed - can be "This data release" or a link to another data source page
-      data-min: XX
-      data-max: XX
-      data-units: XX
+      data-min: NA
+      data-max: NA
+      data-units: NA
     -
       attr-label: LLO # name of attribute 2
       attr-def: >-
         Modelling results for leave-location-out experiments.
       attr-defs: This data release. # location where attributes are deinfed - can be "This data release" or a link to another data source page
-      data-min: XX
-      data-max: XX
-      data-units: XX
+      data-min: NA
+      data-max: NA
+      data-units: NA
     -
       attr-label: LTO # name of attribute 2
       attr-def: >-
         Modelling results for leave-time-out experiments.
       attr-defs: This data release. # location where attributes are deinfed - can be "This data release" or a link to another data source page
-      data-min: XX
-      data-max: XX
-      data-units: XX
+      data-min: NA
+      data-max: NA
+      data-units: NA
     -
       attr-label: baseline # name of attribute 2
       attr-def: >-
         Modelling results for baseline models where the testing partition is well represented in the training partition.
       attr-defs: This data release. # location where attributes are deinfed - can be "This data release" or a link to another data source page
-      data-min: XX
-      data-max: XX
-      data-units: XX
+      data-min: NA
+      data-max: NA
+      data-units: NA
     -
       attr-label: Drought # name of attribute 2
       attr-def: >-
         Modelling results for drought experiments.
       attr-defs: This data release. # location where attributes are deinfed - can be "This data release" or a link to another data source page
-      data-min: XX
-      data-max: XX
-      data-units: XX
+      data-min: NA
+      data-max: NA
+      data-units: NA
     -
       attr-label: xai_outputs # name of attribute 2
       attr-def: >-
         Outputs from expected gradients and permutation based explainable AI (XAI)
       attr-defs: This data release. # location where attributes are deinfed - can be "This data release" or a link to another data source page
-      data-min: XX
-      data-max: XX
-      data-units: XX
+      data-min: NA
+      data-max: NA
+      data-units: NA
 
 purpose: This release is relevant to various deep learning tasks, including model understanding and interrogation through explainable AI as well as implementation of complex deep learning architectures for water resource problems.
 start-date: 19800401
