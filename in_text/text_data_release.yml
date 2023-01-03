@@ -99,6 +99,30 @@ entities:
       data-max: NA
       data-units: NA
     -
+      attr-label: River_dl_dataPrep.py
+      attr-def: >-
+        XX
+      attr-defs: This data release # location where attributes are deinfed - can be "This data release" or a link to another data source page
+      data-min: NA
+      data-max: NA
+      data-units: NA
+    -
+      attr-label: data_out
+      attr-def: >-
+        An empty folder to hold the outputs of XX
+      attr-defs: This data release # location where attributes are deinfed - can be "This data release" or a link to another data source page
+      data-min: NA
+      data-max: NA
+      data-units: NA
+    -
+      attr-label: logs_out
+      attr-def: >-
+        An empty folder to hold the outputs of XX
+      attr-defs: This data release # location where attributes are deinfed - can be "This data release" or a link to another data source page
+      data-min: NA
+      data-max: NA
+      data-units: NA
+    -
       attr-label: README.md
       attr-def: >-
         A markdown file detailing how to run the included workflow
@@ -140,6 +164,14 @@ entities:
       attr-def: >-
         A directory with example Snakemake workflows and associated configuration files to conduct
         basic training and evaluation of models contained in the associated repository.
+      attr-defs: This data release # location where attributes are deinfed - can be "This data release" or a link to another data source page
+      data-min: NA
+      data-max: NA
+      data-units: NA
+    -
+      attr-label: setup.py
+      attr-def: >-
+        XX
       attr-defs: This data release # location where attributes are deinfed - can be "This data release" or a link to another data source page
       data-min: NA
       data-max: NA
@@ -272,10 +304,10 @@ process-description: >-
   contains results for six different training scenarios:
   
 
-      - A baseline scenario where testing data is well represented in training data
-      - A leave-time-out scenario where the warmest years are withheld from training to simulate performance under increasing temperatures.
-      - A leave-time-out scenario where the driest years are withheld from training to simulate performance under drought conditions.
-      - Three leave-location-out scenarios where different sets of biogeophysically distinct regions are withheld from training to simulate performance in unseen geographic domains.
+      - A baseline scenario where testing data is well represented in training data. Modelling results for this scenario are stored in 03_Model_Predictions\baseline.
+      - A leave-time-out scenario where the warmest years are withheld from training to simulate performance under increasing temperatures. Modelling results for this scenario are stored in 03_Model_Predictions\LTO\XX.
+      - A leave-time-out scenario where the driest years are withheld from training to simulate performance under drought conditions. Modelling results for this scenario are stored in 03_Model_Predictions\XX.
+      - Three leave-location-out scenarios where different sets of biogeophysically distinct regions are withheld from training to simulate performance in unseen geographic domains. Modelling results for these scenarios are stored in 03_Model_Predictions\LLO\{location_name}.
   
   
   4) Trained models are used to make predictions on the hold-out test partitions. Error metrics, including bias, root mean squared error, and nash-sutcliffe efficiency
