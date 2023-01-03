@@ -8,7 +8,7 @@ abstract: >-
   two spatially and temporally aware process guided deep learning models (a recurrent graph convolution network - RGCN,
   and a temporal convolution graph model - Graph WaveNet). The associated
   manuscript explores how the architectural differences between the two models influence how
-  they learn spatial and temporal relationships, and how those learned relationships influence a models ability
+  they learn spatial and temporal relationships, and how those learned relationships influence a model's ability
   to accurately predict stream temperature as domains shift towards out-of-bounds conditions. This data release and model
   archive contains three zipped folders for 1) Data Preparation, 2) Modelling Code, and 3) Model Predictions. Instructions for running
   data preparation code and modelling code can be found in the README.md files in 01_Data_Prep and 02_Model_Code respectively.
@@ -55,95 +55,135 @@ entities:
       attr-def: >-
         A yaml file for creating the necessary Python environment to run the workflow
       attr-defs: This data release # location where attributes are deinfed - can be "This data release" or a link to another data source page
-      data-min: XX
-      data-max: XX
-      data-units: XX
+      data-min: NA
+      data-max: NA
+      data-units: NA
     -
       attr-label: config.yml
       attr-def: >-
-        A configuration file for specifying items to pull from Sciencebase
+        A configuration file for specifying items to pull from ScienceBase
       attr-defs: This data release # location where attributes are deinfed - can be "This data release" or a link to another data source page
-      data-min: XX
-      data-max: XX
-      data-units: XX
+      data-min: NA
+      data-max: NA
+      data-units: NA
     -
       attr-label: Snakefile
       attr-def: >-
-        A snakemake workflow for pulling and formatting data
+        A Snakemake workflow for pulling and formatting data
       attr-defs: This data release # location where attributes are deinfed - can be "This data release" or a link to another data source page
-      data-min: XX
-      data-max: XX
-      data-units: XX
+      data-min: NA
+      data-max: NA
+      data-units: NA
     -
       attr-label: makeArrays.py
       attr-def: >-
         Utility functions for formatting pulled csv files to zarr format for modelling
       attr-defs: This data release # location where attributes are deinfed - can be "This data release" or a link to another data source page
-      data-min: XX
-      data-max: XX
-      data-units: XX
+      data-min: NA
+      data-max: NA
+      data-units: NA
     -
       attr-label: makeDistanceMatrix.py
       attr-def: >-
         Utility functions for creating a distance matrix representing the Delaware River Basin river network
       attr-defs: This data release # location where attributes are deinfed - can be "This data release" or a link to another data source page
-      data-min: XX
-      data-max: XX
-      data-units: XX
+      data-min: NA
+      data-max: NA
+      data-units: NA
     -
       attr-label: getSciencebaseItems.py
       attr-def: >-
-        Utility functions for pulling down items from Sciencebase
+        Utility functions for pulling down items from ScienceBase
       attr-defs: This data release # location where attributes are deinfed - can be "This data release" or a link to another data source page
-      data-min: XX
-      data-max: XX
-      data-units: XX
+      data-min: NA
+      data-max: NA
+      data-units: NA
     -
-      attr-label: READMe.md
+      attr-label: River_dl_dataPrep.py
+      attr-def: >-
+        XX
+      attr-defs: This data release # location where attributes are deinfed - can be "This data release" or a link to another data source page
+      data-min: NA
+      data-max: NA
+      data-units: NA
+    -
+      attr-label: ChristianaReaches.csv
+      attr-def: >-
+        XX
+      attr-defs: This data release # location where attributes are deinfed - can be "This data release" or a link to another data source page
+      data-min: NA
+      data-max: NA
+      data-units: NA
+    -
+      attr-label: data_out
+      attr-def: >-
+        An empty folder to hold the outputs of XX
+      attr-defs: This data release # location where attributes are deinfed - can be "This data release" or a link to another data source page
+      data-min: NA
+      data-max: NA
+      data-units: NA
+    -
+      attr-label: logs_out
+      attr-def: >-
+        An empty folder to hold the outputs of XX
+      attr-defs: This data release # location where attributes are deinfed - can be "This data release" or a link to another data source page
+      data-min: NA
+      data-max: NA
+      data-units: NA
+    -
+      attr-label: README.md
       attr-def: >-
         A markdown file detailing how to run the included workflow
       attr-defs: This data release # location where attributes are deinfed - can be "This data release" or a link to another data source page
-      data-min: XX
-      data-max: XX
-      data-units: XX
+      data-min: NA
+      data-max: NA
+      data-units: NA
   -
     data-name: 02_Model_Code.zip
     data-description: >-
       A zipped file of the modelling codebase
     attributes: 
     -
-      attr-label: READme.md
+      attr-label: README.md
       attr-def: >-
         A markdown file describing how to run the provided workflows.
       attr-defs: This data release # location where attributes are deinfed - can be "This data release" or a link to another data source page
-      data-min: XX
-      data-max: XX
-      data-units: XX
+      data-min: NA
+      data-max: NA
+      data-units: NA
     -
       attr-label: river-dl
       attr-def: >-
         A folder containing the source code, including models, pre-processing steps, training routines, and model evaluation.
       attr-defs: This data release # location where attributes are deinfed - can be "This data release" or a link to another data source page
-      data-min: XX
-      data-max: XX
-      data-units: XX
+      data-min: NA
+      data-max: NA
+      data-units: NA
     -
       attr-label: environment.yaml
       attr-def: >-
         An environment yaml for creating a conda environment with the necessary libraries.
       attr-defs: This data release # location where attributes are deinfed - can be "This data release" or a link to another data source page
-      data-min: XX
-      data-max: XX
-      data-units: XX
+      data-min: NA
+      data-max: NA
+      data-units: NA
     -
-      attr-label: Workflow Examples
+      attr-label: workflow_examples
       attr-def: >-
         A directory with example Snakemake workflows and associated configuration files to conduct
         basic training and evaluation of models contained in the associated repository.
       attr-defs: This data release # location where attributes are deinfed - can be "This data release" or a link to another data source page
-      data-min: XX
-      data-max: XX
-      data-units: XX
+      data-min: NA
+      data-max: NA
+      data-units: NA
+    -
+      attr-label: setup.py
+      attr-def: >-
+        XX
+      attr-defs: This data release # location where attributes are deinfed - can be "This data release" or a link to another data source page
+      data-min: NA
+      data-max: NA
+      data-units: NA
   -
     data-name: 03_Model_Predictions.zip
     data-description: >-
@@ -154,49 +194,49 @@ entities:
       attr-def: >-
         Snakemake workflows and associated configuration files used to generate results.
       attr-defs: This data release. # location where attributes are deinfed - can be "This data release" or a link to another data source page
-      data-min: XX
-      data-max: XX
-      data-units: XX
+      data-min: NA
+      data-max: NA
+      data-units: NA
     -
       attr-label: LLO # name of attribute 2
       attr-def: >-
         Modelling results for leave-location-out experiments.
       attr-defs: This data release. # location where attributes are deinfed - can be "This data release" or a link to another data source page
-      data-min: XX
-      data-max: XX
-      data-units: XX
+      data-min: NA
+      data-max: NA
+      data-units: NA
     -
       attr-label: LTO # name of attribute 2
       attr-def: >-
         Modelling results for leave-time-out experiments.
       attr-defs: This data release. # location where attributes are deinfed - can be "This data release" or a link to another data source page
-      data-min: XX
-      data-max: XX
-      data-units: XX
+      data-min: NA
+      data-max: NA
+      data-units: NA
     -
       attr-label: baseline # name of attribute 2
       attr-def: >-
-        Modelling results for for baseline models where the testing partition is well represented in the training partion.
+        Modelling results for baseline models where the testing partition is well represented in the training partition.
       attr-defs: This data release. # location where attributes are deinfed - can be "This data release" or a link to another data source page
-      data-min: XX
-      data-max: XX
-      data-units: XX
+      data-min: NA
+      data-max: NA
+      data-units: NA
     -
       attr-label: Drought # name of attribute 2
       attr-def: >-
         Modelling results for drought experiments.
       attr-defs: This data release. # location where attributes are deinfed - can be "This data release" or a link to another data source page
-      data-min: XX
-      data-max: XX
-      data-units: XX
+      data-min: NA
+      data-max: NA
+      data-units: NA
     -
       attr-label: xai_outputs # name of attribute 2
       attr-def: >-
         Outputs from expected gradients and permutation based explainable AI (XAI)
       attr-defs: This data release. # location where attributes are deinfed - can be "This data release" or a link to another data source page
-      data-min: XX
-      data-max: XX
-      data-units: XX
+      data-min: NA
+      data-max: NA
+      data-units: NA
 
 purpose: This release is relevant to various deep learning tasks, including model understanding and interrogation through explainable AI as well as implementation of complex deep learning architectures for water resource problems.
 start-date: 19800401
@@ -206,7 +246,7 @@ update: none planned
 themekeywords: ["process guided deep learning", "generalization", "explainable AI (XAI)", "stream temperature", "domain shift", "machine learning", "hybrid modeling", "water","temperature","modeling","climate change"]
 
 usage-rules: >-
-  These data are open access usable via creative commons as long as original data providers are acknowledged
+  None
 
 descgeog: "Zipped folders containing code and csv files detailing stream temperature predictions in the Delaware River Basin"
 data-publisher: U.S. Geological Survey
@@ -227,7 +267,6 @@ contact-zip: 53562
 metadata-person: Simon N. Topp
 metadata-position: Machine Learning Specialist
 metadata-phone: 303-917-2694
-metadata-fax: XX
 metadata-email: stopp@usgs.gov
 metadata-address: "8505 Research Way"
 metadata-city: Middleton
@@ -237,7 +276,7 @@ metadata-date: !expr format(Sys.time(),'%Y%m%d')
 
 accur-test: No formal attribute accuracy tests were conducted.
 funding-credits: >-
-  This study was funded by the USGS with support from the U.S. Department of Energy, Office of Science, Office of Biological and Environmental 
+  This study was funded by the USGS with support from the U.S. Department of Energy, Office of Science, Office of Biological and Environmental
   Research, under Interagency Agreement Number 89243021SSC000068 as part of the ExaSheds project.
   This research used resources of the Core Science Analytics and Synthesis Advanced Research Computing program at the U.S. Geological Survey.
 
@@ -246,47 +285,47 @@ funding-credits: >-
 #  The data are stored in 4 child folders: 1) spatial information, 2) observations, and 3) driver data, 4) forecasts
 #  <a href="url">link text</a>
 process-description: >-
-  Details of processing steps contained within this release are below, for additional information please 
+  Details of processing steps contained within this release are below, for additional information please
   see the relevant README.md within each zipped folder:
   
   
   (Processed in 01_Data Prep)
   
-  1) Initial data is downloaded from Sciencebase (Oliver et al, 2021; https://doi.org/10.5066/P9GD8I7A). This data includes daily 
-  meterological drivers (1980-2021), reach characterstics, process model outputs, stream temperature observations, 
-  and an adjacency matrix detailing spatial relationships for 456 river reaches within the Delaware River Basin. 
+  1) Initial data is downloaded from ScienceBase (Oliver et al, 2021; https://doi.org/10.5066/P9GD8I7A). This data includes daily
+  meteorological drivers (1980-2021), river reach characteristics, process model outputs, stream temperature observations,
+  and an adjacency matrix detailing spatial relationships for 456 river reaches within the Delaware River Basin.
   All drivers, reach information, and observations are munged to remove missing values and extreme outliers.
 
   
   (Processed in 02_Model_Code)
   
-  2) Code takes the output of (1) and separates it into training, validation, and test partions as defined by the 
+  2) Code takes the output of (1) and separates it into training, validation, and test partitions as defined by the
   configuration files for the Snakemake workflows.
   
   
   3) Prepared data from (2) are used to train two different spatiotemporally aware process guided deep learning models.
-  The first is a Recurrent Graph Convolution Network and the second is a Dilated Temporal Convolution Graph Model (GraphWave Net). 
-  Training is done in two phases for 6 different study scenarios (listed below). First, models are pre-trained on the process model 
-  outputs (PRMS-SNTemp) for the entire region and study period. After pre-training, models are fine-tuned on stream temperature 
-  observations restricted to the training period and reaches defined in the configuration file. Fine-tuning is done with an 
-  early stopping metric that stops training if the loss on the validation data partion hasn't improved in 20 epochs. This release
+  The first is a Recurrent Graph Convolution Network and the second is a Dilated Temporal Convolution Graph Model (GraphWave Net).
+  Training is done in two phases for 6 different study scenarios (listed below). First, models are pre-trained on the process model
+  outputs (PRMS-SNTemp) for the entire region and study period. After pre-training, models are fine-tuned on stream temperature
+  observations restricted to the training period and reaches defined in the configuration file. Fine-tuning is done with an
+  early stopping metric that stops training if the loss on the validation data partition hasn't improved in 20 epochs. This release
   contains results for six different training scenarios:
   
 
-      - A baseline scneario where testing data is well represented in training data
-      - A leave-time-out scenario where the warmest years are withheld from training to simulate performance under increasing temperatures.
-      - A leave-time-out scenario where the driest years are withheld from training to simulate performance under drought conditions.
-      - Three leave-location-out scenarios where different sets of biogeophysically distinct regions are withheld from training to simulate performance in unseen geographic domains.
+      - A baseline scenario where testing data is well represented in training data. Modelling results for this scenario are stored in 03_Model_Predictions\baseline.
+      - A leave-time-out scenario where the warmest years are withheld from training to simulate performance under increasing temperatures. Modelling results for this scenario are stored in 03_Model_Predictions\LTO\XX.
+      - A leave-time-out scenario where the driest years are withheld from training to simulate performance under drought conditions. Modelling results for this scenario are stored in 03_Model_Predictions\XX.
+      - Three leave-location-out scenarios where different sets of biogeophysically distinct regions are withheld from training to simulate performance in unseen geographic domains. Modelling results for these scenarios are stored in 03_Model_Predictions\LLO\{location_name}.
   
   
-  4) Trained models are used to make predictions on the hold-out test partions. Error metrics, including bias, root mean squared error, and nash-sutcliffe efficiency
-  are calculated for the overall partitions, by reach/partition, and by month/partition. These metrics can be found in 03_Model_Predictions in the 
+  4) Trained models are used to make predictions on the hold-out test partitions. Error metrics, including bias, root mean squared error, and nash-sutcliffe efficiency
+  are calculated for the overall partitions, by reach/partition, and by month/partition. These metrics can be found in 03_Model_Predictions in the
   "overall_metrics.csv", "reach_metrics.csv", and "month_metrics.csv" files for each model/training run respectively.
   
   
   5) Expected gradients and permutation based explainable AI (XAI) approaches are used to understand the learned spatial and temporal relationships
-  within the models. These experiments examine how inputs at one location or timestep influence predictions at another.  Workflows to recreate
-  these experiments can be found in 03_Model_Predictions/Snakemake_Workflows and actual outputs can be found in 03_Model_Predictions/xai_outputs.
+  within the models. These experiments examine how inputs at one location or timestep influence predictions at another. Workflows to recreate
+  these experiments can be found in 03_Model_Predictions/results/Snakemake_Workflows and actual outputs can be found in 03_Model_Predictions/results/xai_outputs.
   
 distro-person: Simon N. Topp
 liability-statement: >-
