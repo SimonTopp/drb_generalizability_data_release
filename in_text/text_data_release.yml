@@ -206,7 +206,7 @@ update: none planned
 themekeywords: ["process guided deep learning", "generalization", "explainable AI (XAI)", "stream temperature", "domain shift", "machine learning", "hybrid modeling", "water","temperature","modeling","climate change"]
 
 usage-rules: >-
-  These data are open access usable via creative commons as long as original data providers are acknowledged
+  None
 
 descgeog: "Zipped folders containing code and csv files detailing stream temperature predictions in the Delaware River Basin"
 data-publisher: U.S. Geological Survey
