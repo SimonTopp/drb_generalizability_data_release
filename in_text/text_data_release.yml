@@ -285,8 +285,8 @@ process-description: >-
   
   
   5) Expected gradients and permutation based explainable AI (XAI) approaches are used to understand the learned spatial and temporal relationships
-  within the models. These experiments examine how inputs at one location or timestep influence predictions at another.  Workflows to recreate
-  these experiments can be found in 03_Model_Predictions/Snakemake_Workflows and actual outputs can be found in 03_Model_Predictions/xai_outputs.
+  within the models. These experiments examine how inputs at one location or timestep influence predictions at another. Workflows to recreate
+  these experiments can be found in 03_Model_Predictions/results/Snakemake_Workflows and actual outputs can be found in 03_Model_Predictions/results/xai_outputs.
   
 distro-person: Simon N. Topp
 liability-statement: >-
