@@ -99,7 +99,7 @@ entities:
       data-max: NA
       data-units: NA
     -
-      attr-label: READMe.md
+      attr-label: README.md
       attr-def: >-
         A markdown file detailing how to run the included workflow
       attr-defs: This data release # location where attributes are deinfed - can be "This data release" or a link to another data source page
@@ -112,7 +112,7 @@ entities:
       A zipped file of the modelling codebase
     attributes: 
     -
-      attr-label: READme.md
+      attr-label: README.md
       attr-def: >-
         A markdown file describing how to run the provided workflows.
       attr-defs: This data release # location where attributes are deinfed - can be "This data release" or a link to another data source page
