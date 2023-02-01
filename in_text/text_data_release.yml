@@ -292,7 +292,7 @@ process-description: >-
   (Processed in 01_Data Prep)
   
   1) Initial data is downloaded from ScienceBase (Oliver et al, 2021; https://doi.org/10.5066/P9GD8I7A). This data includes daily
-  meteorological drivers (1980-2021), river reach characteristics, process model outputs, stream temperature observations,
+  meteorological drivers (1980-2021), river reach characteristics, process model outputs of stream temperature and discharge, stream temperature observations,
   and an adjacency matrix detailing spatial relationships for 456 river reaches within the Delaware River Basin.
   All drivers, reach information, and observations are munged to remove missing values and extreme outliers.
 
@@ -313,8 +313,8 @@ process-description: >-
   
 
       - A baseline scenario where testing data is well represented in training data. Modelling results for this scenario are stored in 03_Model_Predictions\baseline.
-      - A leave-time-out scenario where the warmest years are withheld from training to simulate performance under increasing temperatures. Modelling results for this scenario are stored in 03_Model_Predictions\LTO\XX.
-      - A leave-time-out scenario where the driest years are withheld from training to simulate performance under drought conditions. Modelling results for this scenario are stored in 03_Model_Predictions\XX.
+      - A leave-time-out scenario where the warmest years are withheld from training to simulate performance under increasing temperatures. Modelling results for this scenario are stored in 03_Model_Predictions\LTO\max.
+      - A leave-time-out scenario where the driest years are withheld from training to simulate performance under drought conditions. Modelling results for this scenario are stored in 03_Model_Predictions\Drought.
       - Three leave-location-out scenarios where different sets of biogeophysically distinct regions are withheld from training to simulate performance in unseen geographic domains. Modelling results for these scenarios are stored in 03_Model_Predictions\LLO\{location_name}.
   
   
@@ -325,7 +325,8 @@ process-description: >-
   
   5) Expected gradients and permutation based explainable AI (XAI) approaches are used to understand the learned spatial and temporal relationships
   within the models. These experiments examine how inputs at one location or timestep influence predictions at another. Workflows to recreate
-  these experiments can be found in 03_Model_Predictions/results/Snakemake_Workflows and actual outputs can be found in 03_Model_Predictions/results/xai_outputs.
+  these experiments (Snakefile_permutation.smk, Snakefile_permutation_shuffle.smk, and Snakefile_expected_gradients.smk) can be found
+  in 03_Model_Predictions/results/Snakemake_Workflows  and actual outputs can be found in 03_Model_Predictions/results/xai_outputs.
   
 distro-person: Simon N. Topp
 liability-statement: >-
