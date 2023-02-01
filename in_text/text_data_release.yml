@@ -61,7 +61,7 @@ entities:
     -
       attr-label: config.yml
       attr-def: >-
-        A configuration file for specifying items to pull from ScienceBase
+        A configuration file for specifying items to pull from ScienceBase as well as cutoff values for those items and a list of segments to exclude from data processing.
       attr-defs: This data release # location where attributes are deinfed - can be "This data release" or a link to another data source page
       data-min: NA
       data-max: NA
@@ -99,17 +99,9 @@ entities:
       data-max: NA
       data-units: NA
     -
-      attr-label: River_dl_dataPrep.py
-      attr-def: >-
-        XX
-      attr-defs: This data release # location where attributes are deinfed - can be "This data release" or a link to another data source page
-      data-min: NA
-      data-max: NA
-      data-units: NA
-    -
       attr-label: ChristianaReaches.csv
       attr-def: >-
-        XX
+        A csv file with reach IDs to subset the Christiana basin as a small test basin for modelling efforts.
       attr-defs: This data release # location where attributes are deinfed - can be "This data release" or a link to another data source page
       data-min: NA
       data-max: NA
