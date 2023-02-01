@@ -160,6 +160,14 @@ entities:
       data-max: NA
       data-units: NA
     -
+      attr-label: setup.py
+      attr-def: >-
+        A short setup script to required to install river-dl as a library.
+      attr-defs: This data release # location where attributes are deinfed - can be "This data release" or a link to another data source page
+      data-min: NA
+      data-max: NA
+      data-units: NA
+    -
       attr-label: workflow_examples
       attr-def: >-
         A directory with example Snakemake workflows and associated configuration files to conduct
@@ -184,7 +192,10 @@ entities:
     -
       attr-label: Snakemake_Workflows # name of attribute 1
       attr-def: >-
-        Snakemake workflows and associated configuration files used to generate results.
+        Snakemake workflows and associated configuration files used to generate results. Files in this
+        folder include: Two .yml configuration files detailing model parameters for GWN and RGCN respectively, Snakefile_GWN.smk and Snakefile_RGCN.smk
+        that contain workflows for training models across the 6 scenarios (results in baseline, Drought, LLO, and LTO folders), and three additional Snakefiles
+        that contain workflows for the explainable XAI analysis contained here (xai_outputs folder).
       attr-defs: This data release. # location where attributes are deinfed - can be "This data release" or a link to another data source page
       data-min: NA
       data-max: NA
@@ -208,7 +219,9 @@ entities:
     -
       attr-label: baseline # name of attribute 2
       attr-def: >-
-        Modelling results for baseline models where the testing partition is well represented in the training partition.
+        Modelling results for baseline models where the testing partition is well represented in the training partition. This folder additionally
+        contains ten replicates of pre-training results where the models are trained on the outputs of the PRMS-SNTemp process model.
+        Weights from these pre-training results are used to initialize models in all other training scenarios.
       attr-defs: This data release. # location where attributes are deinfed - can be "This data release" or a link to another data source page
       data-min: NA
       data-max: NA
