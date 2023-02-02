@@ -101,7 +101,7 @@ entities:
     -
       attr-label: ChristianaReaches.csv
       attr-def: >-
-        A csv file with reach IDs to subset the Christiana basin as a small test basin for modelling efforts.
+        A csv file with reach IDs to subset the Christiana Basin as a small test basin for modelling efforts. 
       attr-defs: This data release # location where attributes are deinfed - can be "This data release" or a link to another data source page
       data-min: NA
       data-max: NA
@@ -211,7 +211,7 @@ entities:
         where models were trained on two of three geographic regions in the study area
         and tested on the third.  Folder includes training logs (finetune_log.csv), overall 
         performance metrics (overall_metrics.csv), monthly performance metrics (month_metrics.csv),
-        and reach scale performance metrics (reach_metrics.csv). Please see included data dictionary
+        and reach scale performance metrics (reach_metrics.csv). Please see included data_dictionary_eval
         for additional information on what each of these files contain.
       attr-defs: This data release. # location where attributes are deinfed - can be "This data release" or a link to another data source page
       data-min: NA
@@ -224,7 +224,7 @@ entities:
         are with withheld from training and used to test the models ability to generalize to 
         higher temperatures. Folder includes training logs (finetune_log.csv), overall 
         performance metrics (overall_metrics.csv), monthly performance metrics (month_metrics.csv),
-        and reach scale performance metrics (reach_metrics.csv). Please see included data dictionary
+        and reach scale performance metrics (reach_metrics.csv). Please see included data_dictionary_eval
         for additional information on what each of these files contain.
       attr-defs: This data release. # location where attributes are deinfed - can be "This data release" or a link to another data source page
       data-min: NA
@@ -237,7 +237,7 @@ entities:
         contains ten replicates of pre-training results where the models are trained on the outputs of the PRMS-SNTemp process model.
         Weights from these pre-training results are used to initialize models in all other training scenarios. Folder includes training logs 
         (pretrain_log.cvs, finetune_log.csv), overall performance metrics (overall_metrics.csv), monthly performance metrics (month_metrics.csv),
-        and reach scale performance metrics (reach_metrics.csv). Please see included data dictionary
+        and reach scale performance metrics (reach_metrics.csv). Please see included data_dictionary_eval
         for additional information on what each of these files contain.
       attr-defs: This data release. # location where attributes are deinfed - can be "This data release" or a link to another data source page
       data-min: NA
@@ -250,7 +250,7 @@ entities:
         droughts or the least precipitation withheld from training and used to test the models ability
         to generalize to higher temperatures.  Folder includes training logs (finetune_log.csv),
         overall performance metrics (overall_metrics.csv), monthly performance metrics (month_metrics.csv),
-        and reach scale performance metrics (reach_metrics.csv). Please see included data dictionary
+        and reach scale performance metrics (reach_metrics.csv). Please see included data_dictionary_eval
         for additional information on what each of these files contain
       attr-defs: This data release. # location where attributes are deinfed - can be "This data release" or a link to another data source page
       data-min: NA
@@ -260,7 +260,7 @@ entities:
       attr-label: xai_outputs # name of attribute 2
       attr-def: >-
         Outputs from expected gradients and permutation based explainable AI (XAI). Please see
-        data_dictionary_xai.xlsx for additional details on the contents of files in this folder.
+        data_dictionary_xai for additional details on the contents of files in this folder.
       attr-defs: This data release. # location where attributes are deinfed - can be "This data release" or a link to another data source page
       data-min: NA
       data-max: NA
