@@ -188,6 +188,10 @@ entities:
     data-name: 03_Model_Predictions.zip
     data-description: >-
      A zipped file of all modelling results and the Snakemake workflows that generated them.
+     Results are organized into 6 folders. Four folders (baseline, drought, LLO, and LTO) contain model
+     predictions and evaluation metrics broken down by reach, month, and overall performance. These files
+     are provided for two models and for ten replicate runs per model. One folder (Snakemake_Workflows) contains
+     the workflows for reproducing those results, and one folder (xai_outputs) contains the results from the explainable AI analysis.
     attributes: 
     -
       attr-label: Snakemake_Workflows # name of attribute 1
@@ -203,7 +207,12 @@ entities:
     -
       attr-label: LLO # name of attribute 2
       attr-def: >-
-        Modelling results for leave-location-out experiments.
+        Modelling results for leave-location-out experiments. These include experiments
+        where models were trained on two of three geographic regions in the study area
+        and tested on the third.  Folder includes training logs (finetune_log.csv), overall 
+        performance metrics (overall_metrics.csv), monthly performance metrics (month_metrics.csv),
+        and reach scale performance metrics (reach_metrics.csv). Please see included data dictionary
+        for additional information on what each of these files contain.
       attr-defs: This data release. # location where attributes are deinfed - can be "This data release" or a link to another data source page
       data-min: NA
       data-max: NA
@@ -211,7 +220,12 @@ entities:
     -
       attr-label: LTO # name of attribute 2
       attr-def: >-
-        Modelling results for leave-time-out experiments.
+        Modelling results for the leave-time-out experiment where the ten warmest years
+        are with withheld from training and used to test the models ability to generalize to 
+        higher temperatures. Folder includes training logs (finetune_log.csv), overall 
+        performance metrics (overall_metrics.csv), monthly performance metrics (month_metrics.csv),
+        and reach scale performance metrics (reach_metrics.csv). Please see included data dictionary
+        for additional information on what each of these files contain.
       attr-defs: This data release. # location where attributes are deinfed - can be "This data release" or a link to another data source page
       data-min: NA
       data-max: NA
@@ -221,7 +235,10 @@ entities:
       attr-def: >-
         Modelling results for baseline models where the testing partition is well represented in the training partition. This folder additionally
         contains ten replicates of pre-training results where the models are trained on the outputs of the PRMS-SNTemp process model.
-        Weights from these pre-training results are used to initialize models in all other training scenarios.
+        Weights from these pre-training results are used to initialize models in all other training scenarios. Folder includes training logs 
+        (pretrain_log.cvs, finetune_log.csv), overall performance metrics (overall_metrics.csv), monthly performance metrics (month_metrics.csv),
+        and reach scale performance metrics (reach_metrics.csv). Please see included data dictionary
+        for additional information on what each of these files contain.
       attr-defs: This data release. # location where attributes are deinfed - can be "This data release" or a link to another data source page
       data-min: NA
       data-max: NA
@@ -229,7 +246,12 @@ entities:
     -
       attr-label: Drought # name of attribute 2
       attr-def: >-
-        Modelling results for drought experiments.
+        Modelling results for the drought experiment where ten years with either officially declared
+        droughts or the least precipitation withheld from training and used to test the models ability
+        to generalize to higher temperatures.  Folder includes training logs (finetune_log.csv),
+        overall performance metrics (overall_metrics.csv), monthly performance metrics (month_metrics.csv),
+        and reach scale performance metrics (reach_metrics.csv). Please see included data dictionary
+        for additional information on what each of these files contain
       attr-defs: This data release. # location where attributes are deinfed - can be "This data release" or a link to another data source page
       data-min: NA
       data-max: NA
@@ -237,7 +259,8 @@ entities:
     -
       attr-label: xai_outputs # name of attribute 2
       attr-def: >-
-        Outputs from expected gradients and permutation based explainable AI (XAI)
+        Outputs from expected gradients and permutation based explainable AI (XAI). Please see
+        data_dictionary_xai.xlsx for additional details on the contents of files in this folder.
       attr-defs: This data release. # location where attributes are deinfed - can be "This data release" or a link to another data source page
       data-min: NA
       data-max: NA
