@@ -59,6 +59,16 @@ entities:
       data-max: NA
       data-units: NA
     -
+      attr-label: environment_versioned.yaml
+      attr-def: >-
+        A yaml file with package version details for the relevant environment. We recommend
+        using the the environment.yaml to create the environment with a more flexible solve and only relying on this
+        versioned yaml if there are package conflicts or issues. 
+      attr-defs: This data release # location where attributes are deinfed - can be "This data release" or a link to another data source page
+      data-min: NA
+      data-max: NA
+      data-units: NA
+    -
       attr-label: config.yml
       attr-def: >-
         A configuration file for specifying items to pull from ScienceBase as well as cutoff values for those items and a list of segments to exclude from data processing.
@@ -155,6 +165,16 @@ entities:
       attr-label: environment.yaml
       attr-def: >-
         An environment yaml for creating a conda environment with the necessary libraries.
+      attr-defs: This data release # location where attributes are deinfed - can be "This data release" or a link to another data source page
+      data-min: NA
+      data-max: NA
+      data-units: NA
+    -
+       attr-label: environment_versioned.yaml
+      attr-def: >-
+        A yaml file with package version details for the relevant environment. We recommend
+        using the the environment.yaml to create the environment with a more flexible solve and only relying on this
+        versioned yaml if there are package conflicts or issues. 
       attr-defs: This data release # location where attributes are deinfed - can be "This data release" or a link to another data source page
       data-min: NA
       data-max: NA
