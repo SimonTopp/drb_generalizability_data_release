@@ -252,7 +252,7 @@ entities:
       attr-label: Drought # name of attribute 2
       attr-def: >-
         Modelling results for the drought experiment where seven years with officially declared
-        droughts and the three remaining years with the lowest annual precipitation withheld from training and used to test the models ability
+        droughts and the three remaining years with the lowest annual precipitation are withheld from training and used to test the models ability
         to generalize to drought conditions.  Folder includes training logs (finetune_log.csv),
         overall performance metrics (overall_metrics.csv), monthly performance metrics (month_metrics.csv),
         and reach scale performance metrics (reach_metrics.csv). Please see included data_dictionary_eval
