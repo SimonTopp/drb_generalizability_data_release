@@ -109,14 +109,6 @@ entities:
       data-max: NA
       data-units: NA
     -
-      attr-label: ChristianaReaches.csv
-      attr-def: >-
-        A csv file with reach IDs to subset the Christiana Basin as a small test basin for modelling efforts. 
-      attr-defs: This data release # location where attributes are deinfed - can be "This data release" or a link to another data source page
-      data-min: NA
-      data-max: NA
-      data-units: NA
-    -
       attr-label: data_out
       attr-def: >-
         An empty folder to hold the outputs of XX
