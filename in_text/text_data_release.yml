@@ -2,7 +2,7 @@ title: >-
   Examining the influence of deep learning architecture on generalizability for predicting stream temperature in the Delaware River Basin
 
 abstract: >-
-  This data release and model archive provides all data, code, and modelling results used in Topp et al. (2022) to examine the
+  This data release and model archive provides all data, code, and modelling results used in Topp et al. (2023) to examine the
   influence of deep learning architecture on generalizability when predicting stream temperature
   in the Delaware River Basin (DRB). Briefly, we modeled stream temperature in the DRB using
   two spatially and temporally aware process guided deep learning models (a recurrent graph convolution network - RGCN,
@@ -111,7 +111,7 @@ entities:
     -
       attr-label: data_out
       attr-def: >-
-        An empty folder to hold the outputs of XX
+        An empty folder to hold the outputs of the Snakemake workflow
       attr-defs: This data release # location where attributes are deinfed - can be "This data release" or a link to another data source page
       data-min: NA
       data-max: NA
@@ -119,7 +119,7 @@ entities:
     -
       attr-label: logs_out
       attr-def: >-
-        An empty folder to hold the outputs of XX
+        An empty folder to hold the log files detailing past run information of the Snakemake workflow
       attr-defs: This data release # location where attributes are deinfed - can be "This data release" or a link to another data source page
       data-min: NA
       data-max: NA
@@ -162,7 +162,7 @@ entities:
       data-max: NA
       data-units: NA
     -
-       attr-label: environment_versioned.yaml
+      attr-label: environment_versioned.yaml
       attr-def: >-
         A yaml file with package version details for the relevant environment. We recommend
         using the the environment.yaml to create the environment with a more flexible solve and only relying on this
@@ -183,15 +183,8 @@ entities:
       attr-label: workflow_examples
       attr-def: >-
         A directory with example Snakemake workflows and associated configuration files to conduct
-        basic training and evaluation of models contained in the associated repository.
-      attr-defs: This data release # location where attributes are deinfed - can be "This data release" or a link to another data source page
-      data-min: NA
-      data-max: NA
-      data-units: NA
-    -
-      attr-label: setup.py
-      attr-def: >-
-        XX
+        basic training and evaluation of models contained in the associated repository. Note that these examples are to provide familiarity
+        with the codebase and will not reproduce the results contained here.  Workflows to reproduce the actual results are in 03_Model_Predictions/Snakemake_Workflows.
       attr-defs: This data release # location where attributes are deinfed - can be "This data release" or a link to another data source page
       data-min: NA
       data-max: NA
@@ -233,7 +226,7 @@ entities:
       attr-label: LTO # name of attribute 2
       attr-def: >-
         Modelling results for the leave-time-out experiment where the ten warmest years
-        are with withheld from training and used to test the models ability to generalize to 
+        are with withheld from training and used to test the models ability to generalize to
         higher temperatures. Folder includes training logs (finetune_log.csv), overall 
         performance metrics (overall_metrics.csv), monthly performance metrics (month_metrics.csv),
         and reach scale performance metrics (reach_metrics.csv). Please see included data_dictionary_eval
@@ -258,12 +251,12 @@ entities:
     -
       attr-label: Drought # name of attribute 2
       attr-def: >-
-        Modelling results for the drought experiment where ten years with either officially declared
-        droughts or the least precipitation withheld from training and used to test the models ability
-        to generalize to higher temperatures.  Folder includes training logs (finetune_log.csv),
+        Modelling results for the drought experiment where seven years with officially declared
+        droughts and the three remaining years with the lowest annual precipitation withheld from training and used to test the models ability
+        to generalize to drought conditions.  Folder includes training logs (finetune_log.csv),
         overall performance metrics (overall_metrics.csv), monthly performance metrics (month_metrics.csv),
         and reach scale performance metrics (reach_metrics.csv). Please see included data_dictionary_eval
-        for additional information on what each of these files contain
+        for additional information on what each of these files contain.
       attr-defs: This data release. # location where attributes are deinfed - can be "This data release" or a link to another data source page
       data-min: NA
       data-max: NA
