@@ -2,7 +2,7 @@ title: >-
   Examining the influence of deep learning architecture on generalizability for predicting stream temperature in the Delaware River Basin
 
 abstract: >-
-  This data release and model archive provides all data, code, and modelling results used in Topp et al. (2022) to examine the
+  This data release and model archive provides all data, code, and modelling results used in Topp et al. (2023) to examine the
   influence of deep learning architecture on generalizability when predicting stream temperature
   in the Delaware River Basin (DRB). Briefly, we modeled stream temperature in the DRB using
   two spatially and temporally aware process guided deep learning models (a recurrent graph convolution network - RGCN,
@@ -59,9 +59,19 @@ entities:
       data-max: NA
       data-units: NA
     -
+      attr-label: environment_versioned.yaml
+      attr-def: >-
+        A yaml file with package version details for the relevant environment. We recommend
+        using the the environment.yaml to create the environment with a more flexible solve and only relying on this
+        versioned yaml if there are package conflicts or issues. 
+      attr-defs: This data release # location where attributes are deinfed - can be "This data release" or a link to another data source page
+      data-min: NA
+      data-max: NA
+      data-units: NA
+    -
       attr-label: config.yml
       attr-def: >-
-        A configuration file for specifying items to pull from ScienceBase
+        A configuration file for specifying items to pull from ScienceBase as well as cutoff values for those items and a list of segments to exclude from data processing.
       attr-defs: This data release # location where attributes are deinfed - can be "This data release" or a link to another data source page
       data-min: NA
       data-max: NA
@@ -99,25 +109,9 @@ entities:
       data-max: NA
       data-units: NA
     -
-      attr-label: River_dl_dataPrep.py
-      attr-def: >-
-        XX
-      attr-defs: This data release # location where attributes are deinfed - can be "This data release" or a link to another data source page
-      data-min: NA
-      data-max: NA
-      data-units: NA
-    -
-      attr-label: ChristianaReaches.csv
-      attr-def: >-
-        XX
-      attr-defs: This data release # location where attributes are deinfed - can be "This data release" or a link to another data source page
-      data-min: NA
-      data-max: NA
-      data-units: NA
-    -
       attr-label: data_out
       attr-def: >-
-        An empty folder to hold the outputs of XX
+        An empty folder to hold the outputs of the Snakemake workflow
       attr-defs: This data release # location where attributes are deinfed - can be "This data release" or a link to another data source page
       data-min: NA
       data-max: NA
@@ -125,7 +119,7 @@ entities:
     -
       attr-label: logs_out
       attr-def: >-
-        An empty folder to hold the outputs of XX
+        An empty folder to hold the log files detailing past run information of the Snakemake workflow
       attr-defs: This data release # location where attributes are deinfed - can be "This data release" or a link to another data source page
       data-min: NA
       data-max: NA
@@ -168,10 +162,11 @@ entities:
       data-max: NA
       data-units: NA
     -
-      attr-label: workflow_examples
+      attr-label: environment_versioned.yaml
       attr-def: >-
-        A directory with example Snakemake workflows and associated configuration files to conduct
-        basic training and evaluation of models contained in the associated repository.
+        A yaml file with package version details for the relevant environment. We recommend
+        using the the environment.yaml to create the environment with a more flexible solve and only relying on this
+        versioned yaml if there are package conflicts or issues. 
       attr-defs: This data release # location where attributes are deinfed - can be "This data release" or a link to another data source page
       data-min: NA
       data-max: NA
@@ -179,7 +174,17 @@ entities:
     -
       attr-label: setup.py
       attr-def: >-
-        XX
+        A short setup script to required to install river-dl as a library.
+      attr-defs: This data release # location where attributes are deinfed - can be "This data release" or a link to another data source page
+      data-min: NA
+      data-max: NA
+      data-units: NA
+    -
+      attr-label: workflow_examples
+      attr-def: >-
+        A directory with example Snakemake workflows and associated configuration files to conduct
+        basic training and evaluation of models contained in the associated repository. Note that these examples are to provide familiarity
+        with the codebase and will not reproduce the results contained here.  Workflows to reproduce the actual results are in 03_Model_Predictions/Snakemake_Workflows.
       attr-defs: This data release # location where attributes are deinfed - can be "This data release" or a link to another data source page
       data-min: NA
       data-max: NA
@@ -188,11 +193,18 @@ entities:
     data-name: 03_Model_Predictions.zip
     data-description: >-
      A zipped file of all modelling results and the Snakemake workflows that generated them.
+     Results are organized into 6 folders. Four folders (baseline, drought, LLO, and LTO) contain model
+     predictions and evaluation metrics broken down by reach, month, and overall performance. These files
+     are provided for two models and for ten replicate runs per model. One folder (Snakemake_Workflows) contains
+     the workflows for reproducing those results, and one folder (xai_outputs) contains the results from the explainable AI analysis.
     attributes: 
     -
       attr-label: Snakemake_Workflows # name of attribute 1
       attr-def: >-
-        Snakemake workflows and associated configuration files used to generate results.
+        Snakemake workflows and associated configuration files used to generate results. Files in this
+        folder include: Two .yml configuration files detailing model parameters for GWN and RGCN respectively, Snakefile_GWN.smk and Snakefile_RGCN.smk
+        that contain workflows for training models across the 6 scenarios (results in baseline, Drought, LLO, and LTO folders), and three additional Snakefiles
+        that contain workflows for the explainable XAI analysis contained here (xai_outputs folder).
       attr-defs: This data release. # location where attributes are deinfed - can be "This data release" or a link to another data source page
       data-min: NA
       data-max: NA
@@ -200,7 +212,12 @@ entities:
     -
       attr-label: LLO # name of attribute 2
       attr-def: >-
-        Modelling results for leave-location-out experiments.
+        Modelling results for leave-location-out experiments. These include experiments
+        where models were trained on two of three geographic regions in the study area
+        and tested on the third.  Folder includes training logs (finetune_log.csv), overall 
+        performance metrics (overall_metrics.csv), monthly performance metrics (month_metrics.csv),
+        and reach scale performance metrics (reach_metrics.csv). Please see included data_dictionary_eval
+        for additional information on what each of these files contain.
       attr-defs: This data release. # location where attributes are deinfed - can be "This data release" or a link to another data source page
       data-min: NA
       data-max: NA
@@ -208,7 +225,12 @@ entities:
     -
       attr-label: LTO # name of attribute 2
       attr-def: >-
-        Modelling results for leave-time-out experiments.
+        Modelling results for the leave-time-out experiment where the ten warmest years
+        are with withheld from training and used to test the models ability to generalize to
+        higher temperatures. Folder includes training logs (finetune_log.csv), overall 
+        performance metrics (overall_metrics.csv), monthly performance metrics (month_metrics.csv),
+        and reach scale performance metrics (reach_metrics.csv). Please see included data_dictionary_eval
+        for additional information on what each of these files contain.
       attr-defs: This data release. # location where attributes are deinfed - can be "This data release" or a link to another data source page
       data-min: NA
       data-max: NA
@@ -216,7 +238,12 @@ entities:
     -
       attr-label: baseline # name of attribute 2
       attr-def: >-
-        Modelling results for baseline models where the testing partition is well represented in the training partition.
+        Modelling results for baseline models where the testing partition is well represented in the training partition. This folder additionally
+        contains ten replicates of pre-training results where the models are trained on the outputs of the PRMS-SNTemp process model.
+        Weights from these pre-training results are used to initialize models in all other training scenarios. Folder includes training logs 
+        (pretrain_log.cvs, finetune_log.csv), overall performance metrics (overall_metrics.csv), monthly performance metrics (month_metrics.csv),
+        and reach scale performance metrics (reach_metrics.csv). Please see included data_dictionary_eval
+        for additional information on what each of these files contain.
       attr-defs: This data release. # location where attributes are deinfed - can be "This data release" or a link to another data source page
       data-min: NA
       data-max: NA
@@ -224,7 +251,12 @@ entities:
     -
       attr-label: Drought # name of attribute 2
       attr-def: >-
-        Modelling results for drought experiments.
+        Modelling results for the drought experiment where seven years with officially declared
+        droughts and the three remaining years with the lowest annual precipitation are withheld from training and used to test the models ability
+        to generalize to drought conditions.  Folder includes training logs (finetune_log.csv),
+        overall performance metrics (overall_metrics.csv), monthly performance metrics (month_metrics.csv),
+        and reach scale performance metrics (reach_metrics.csv). Please see included data_dictionary_eval
+        for additional information on what each of these files contain.
       attr-defs: This data release. # location where attributes are deinfed - can be "This data release" or a link to another data source page
       data-min: NA
       data-max: NA
@@ -232,7 +264,8 @@ entities:
     -
       attr-label: xai_outputs # name of attribute 2
       attr-def: >-
-        Outputs from expected gradients and permutation based explainable AI (XAI)
+        Outputs from expected gradients and permutation based explainable AI (XAI). Please see
+        data_dictionary_xai for additional details on the contents of files in this folder.
       attr-defs: This data release. # location where attributes are deinfed - can be "This data release" or a link to another data source page
       data-min: NA
       data-max: NA
@@ -292,7 +325,7 @@ process-description: >-
   (Processed in 01_Data Prep)
   
   1) Initial data is downloaded from ScienceBase (Oliver et al, 2021; https://doi.org/10.5066/P9GD8I7A). This data includes daily
-  meteorological drivers (1980-2021), river reach characteristics, process model outputs, stream temperature observations,
+  meteorological drivers (1980-2021), river reach characteristics, process model outputs of stream temperature and discharge, stream temperature observations,
   and an adjacency matrix detailing spatial relationships for 456 river reaches within the Delaware River Basin.
   All drivers, reach information, and observations are munged to remove missing values and extreme outliers.
 
@@ -313,8 +346,8 @@ process-description: >-
   
 
       - A baseline scenario where testing data is well represented in training data. Modelling results for this scenario are stored in 03_Model_Predictions\baseline.
-      - A leave-time-out scenario where the warmest years are withheld from training to simulate performance under increasing temperatures. Modelling results for this scenario are stored in 03_Model_Predictions\LTO\XX.
-      - A leave-time-out scenario where the driest years are withheld from training to simulate performance under drought conditions. Modelling results for this scenario are stored in 03_Model_Predictions\XX.
+      - A leave-time-out scenario where the warmest years are withheld from training to simulate performance under increasing temperatures. Modelling results for this scenario are stored in 03_Model_Predictions\LTO\max.
+      - A leave-time-out scenario where the driest years are withheld from training to simulate performance under drought conditions. Modelling results for this scenario are stored in 03_Model_Predictions\Drought.
       - Three leave-location-out scenarios where different sets of biogeophysically distinct regions are withheld from training to simulate performance in unseen geographic domains. Modelling results for these scenarios are stored in 03_Model_Predictions\LLO\{location_name}.
   
   
@@ -325,7 +358,8 @@ process-description: >-
   
   5) Expected gradients and permutation based explainable AI (XAI) approaches are used to understand the learned spatial and temporal relationships
   within the models. These experiments examine how inputs at one location or timestep influence predictions at another. Workflows to recreate
-  these experiments can be found in 03_Model_Predictions/results/Snakemake_Workflows and actual outputs can be found in 03_Model_Predictions/results/xai_outputs.
+  these experiments (Snakefile_permutation.smk, Snakefile_permutation_shuffle.smk, and Snakefile_expected_gradients.smk) can be found
+  in 03_Model_Predictions/results/Snakemake_Workflows  and actual outputs can be found in 03_Model_Predictions/results/xai_outputs.
   
 distro-person: Simon N. Topp
 liability-statement: >-
